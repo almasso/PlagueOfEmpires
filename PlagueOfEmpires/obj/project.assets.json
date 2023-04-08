@@ -10255,18 +10255,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alex\\.nuget\\packages\\": {},
+    "C:\\Users\\amass\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alex\\Desktop\\github\\dsi\\helloworld\\helloworld.csproj",
-      "projectName": "helloworld",
-      "projectPath": "C:\\Users\\Alex\\Desktop\\github\\dsi\\helloworld\\helloworld.csproj",
-      "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alex\\Desktop\\github\\dsi\\helloworld\\obj\\",
+      "projectUniqueName": "C:\\Users\\amass\\Desktop\\ALEX\\PlagueOfEmpires\\PlagueOfEmpires\\PlagueOfEmpires.csproj",
+      "projectName": "PlagueOfEmpires",
+      "projectPath": "C:\\Users\\amass\\Desktop\\ALEX\\PlagueOfEmpires\\PlagueOfEmpires\\PlagueOfEmpires.csproj",
+      "packagesPath": "C:\\Users\\amass\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\amass\\Desktop\\ALEX\\PlagueOfEmpires\\PlagueOfEmpires\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -10274,7 +10274,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\amass\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10282,7 +10282,8 @@
         "uap10.0.17763"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "uap10.0.17763": {

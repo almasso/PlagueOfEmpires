@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CbQEuI6K+CDSvXJoDmZFbEcEl50dlW+IJlYYgQTAsSGtYIHGwEk6UO3KI+rAqL+vUk0hE7aMAyvZOaXLt3vUbg==",
+  "dgSpecHash": "PkG9zSwaG/sIntfV/AFeYz2XRm8LfVa7hn0SV4mrY022ey6zT/eeBjXoyf1At6sOUU83KnD1qncu7t8ov0nYuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex\\Desktop\\github\\dsi\\helloworld\\helloworld.csproj",
+  "projectFilePath": "C:\\Users\\amass\\Desktop\\ALEX\\PlagueOfEmpires\\PlagueOfEmpires\\PlagueOfEmpires.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.12-rel-31116-00\\microsoft.net.native.compiler.2.2.12-rel-31116-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.14\\microsoft.net.uwpcoreruntimesdk.2.2.14.nupkg.sha512",

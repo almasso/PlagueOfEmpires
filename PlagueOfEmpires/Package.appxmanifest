@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="10be9d13-1925-412f-ab90-9e5cabfc3879"
-    Publisher="CN=Alex"
+    Name="87fea543-e370-4199-97a1-8ecbb6e8a3d6"
+    Publisher="CN=amass"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="10be9d13-1925-412f-ab90-9e5cabfc3879" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="87fea543-e370-4199-97a1-8ecbb6e8a3d6" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>helloworld</DisplayName>
-    <PublisherDisplayName>Alex</PublisherDisplayName>
+    <DisplayName>PlagueOfEmpires</DisplayName>
+    <PublisherDisplayName>amass</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="helloworld.App">
+      EntryPoint="PlagueOfEmpires.App">
       <uap:VisualElements
-        DisplayName="helloworld"
+        DisplayName="PlagueOfEmpires"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="helloworld"
+        Description="PlagueOfEmpires"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
