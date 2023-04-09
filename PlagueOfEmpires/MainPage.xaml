@@ -6,9 +6,193 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    xmlns:ui="using:Microsoft.Toolkit.Uwp.UI"
+    xmlns:media="using:Microsoft.Toolkit.Uwp.UI.Media">
+
+
+    <Page.Resources>
+        <ui:AttachedDropShadow x:Name="CommonShadow" Offset="0,10,0" Color="Gray" Opacity="1" CastTo="{x:Bind ShadowTarget}" IsMasked="True"/>
+    </Page.Resources>
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Grid.RowSpan="2" Stretch="Fill" Source="./Assets/Fondo.png" />
+
+        <Border Background="White" Margin="50" Width="1250">
+            <Grid>
+                <Border x:Name="ShadowTarget"/>
+                <TextBlock Text="PLAGUE OF EMPIRES" FontSize="120" FontFamily="{StaticResource Aboreto}" Foreground="Red" HorizontalAlignment="Center" FontWeight="ExtraBold" ui:Effects.Shadow="{StaticResource CommonShadow}"/>
+            </Grid>
+        </Border>
+
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Singleplayer" Style="{StaticResource MainButton}" Height="95">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                <media:RadialGradientBrush x:Key="ButtonBackgroundPointerOver" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FFC30101" Offset="0"/>
+                                    <GradientStop Color="#FF5D0202" Offset="1"/>
+                                </media:RadialGradientBrush>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <media:RadialGradientBrush x:Key="ButtonBackgroundPressed" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FFC30101" Offset="0"/>
+                                    <GradientStop Color="#FF5D0202" Offset="1"/>
+                                </media:RadialGradientBrush>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                <media:RadialGradientBrush x:Key="ButtonBackgroundPointerOver" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FFC30101" Offset="0"/>
+                                    <GradientStop Color="#FF5D0202" Offset="1"/>
+                                </media:RadialGradientBrush>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <media:RadialGradientBrush x:Key="ButtonBackgroundPressed" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FFC30101" Offset="0"/>
+                                    <GradientStop Color="#FF5D0202" Offset="1"/>
+                                </media:RadialGradientBrush>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+            </Button>
+            <Button Content="Multiplayer" Style="{StaticResource MainButton}">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                <media:RadialGradientBrush x:Key="ButtonBackgroundPointerOver" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FFC30101" Offset="0"/>
+                                    <GradientStop Color="#FF5D0202" Offset="1"/>
+                                </media:RadialGradientBrush>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <media:RadialGradientBrush x:Key="ButtonBackgroundPressed" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FFC30101" Offset="0"/>
+                                    <GradientStop Color="#FF5D0202" Offset="1"/>
+                                </media:RadialGradientBrush>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                <media:RadialGradientBrush x:Key="ButtonBackgroundPointerOver" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FFC30101" Offset="0"/>
+                                    <GradientStop Color="#FF5D0202" Offset="1"/>
+                                </media:RadialGradientBrush>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <media:RadialGradientBrush x:Key="ButtonBackgroundPressed" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FFC30101" Offset="0"/>
+                                    <GradientStop Color="#FF5D0202" Offset="1"/>
+                                </media:RadialGradientBrush>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+            </Button>
+            <Button Content="Mods &amp; additional content" Style="{StaticResource MainButton}">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                <media:RadialGradientBrush x:Key="ButtonBackgroundPointerOver" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FFC30101" Offset="0"/>
+                                    <GradientStop Color="#FF5D0202" Offset="1"/>
+                                </media:RadialGradientBrush>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <media:RadialGradientBrush x:Key="ButtonBackgroundPressed" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FFC30101" Offset="0"/>
+                                    <GradientStop Color="#FF5D0202" Offset="1"/>
+                                </media:RadialGradientBrush>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                <media:RadialGradientBrush x:Key="ButtonBackgroundPointerOver" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FFC30101" Offset="0"/>
+                                    <GradientStop Color="#FF5D0202" Offset="1"/>
+                                </media:RadialGradientBrush>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <media:RadialGradientBrush x:Key="ButtonBackgroundPressed" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FFC30101" Offset="0"/>
+                                    <GradientStop Color="#FF5D0202" Offset="1"/>
+                                </media:RadialGradientBrush>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+            </Button>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Options" Style="{StaticResource MainButton}">
+                    <Button.Resources>
+                        <ResourceDictionary>
+                            <ResourceDictionary.ThemeDictionaries>
+                                <ResourceDictionary x:Key="Light">
+                                    <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                    <media:RadialGradientBrush x:Key="ButtonBackgroundPointerOver" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                        <GradientStop Color="#FFC30101" Offset="0"/>
+                                        <GradientStop Color="#FF5D0202" Offset="1"/>
+                                    </media:RadialGradientBrush>
+                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                    <media:RadialGradientBrush x:Key="ButtonBackgroundPressed" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                        <GradientStop Color="#FFC30101" Offset="0"/>
+                                        <GradientStop Color="#FF5D0202" Offset="1"/>
+                                    </media:RadialGradientBrush>
+                                </ResourceDictionary>
+                                <ResourceDictionary x:Key="Dark">
+                                    <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                    <media:RadialGradientBrush x:Key="ButtonBackgroundPointerOver" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                        <GradientStop Color="#FFC30101" Offset="0"/>
+                                        <GradientStop Color="#FF5D0202" Offset="1"/>
+                                    </media:RadialGradientBrush>
+                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                    <media:RadialGradientBrush x:Key="ButtonBackgroundPressed" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                        <GradientStop Color="#FFC30101" Offset="0"/>
+                                        <GradientStop Color="#FF5D0202" Offset="1"/>
+                                    </media:RadialGradientBrush>
+                                </ResourceDictionary>
+                            </ResourceDictionary.ThemeDictionaries>
+                        </ResourceDictionary>
+                    </Button.Resources>
+                </Button>
+                <Button Content="Exit" Style="{StaticResource MainButton}">
+                    <Button.Resources>
+                        <ResourceDictionary>
+                            <ResourceDictionary.ThemeDictionaries>
+                                <ResourceDictionary x:Key="Light">
+                                    <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                    <media:RadialGradientBrush x:Key="ButtonBackgroundPointerOver" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                        <GradientStop Color="#FFC30101" Offset="0"/>
+                                        <GradientStop Color="#FF5D0202" Offset="1"/>
+                                    </media:RadialGradientBrush>
+                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                    <media:RadialGradientBrush x:Key="ButtonBackgroundPressed" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                        <GradientStop Color="#FFC30101" Offset="0"/>
+                                        <GradientStop Color="#FF5D0202" Offset="1"/>
+                                    </media:RadialGradientBrush>
+                                </ResourceDictionary>
+                                <ResourceDictionary x:Key="Dark">
+                                    <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                    <media:RadialGradientBrush x:Key="ButtonBackgroundPointerOver" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                        <GradientStop Color="#FFC30101" Offset="0"/>
+                                        <GradientStop Color="#FF5D0202" Offset="1"/>
+                                    </media:RadialGradientBrush>
+                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                    <media:RadialGradientBrush x:Key="ButtonBackgroundPressed" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                        <GradientStop Color="#FFC30101" Offset="0"/>
+                                        <GradientStop Color="#FF5D0202" Offset="1"/>
+                                    </media:RadialGradientBrush>
+                                </ResourceDictionary>
+                            </ResourceDictionary.ThemeDictionaries>
+                        </ResourceDictionary>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </StackPanel>
 
     </Grid>
 </Page>
