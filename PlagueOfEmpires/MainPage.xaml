@@ -94,7 +94,8 @@
                     </ResourceDictionary>
                 </Button.Resources>
             </Button>
-            <Button Content="Mods &amp; additional content" Style="{StaticResource MainButton}">
+            <Button Style="{StaticResource MainButton}" FontSize="40">
+                <TextBlock Text="Mods &amp; additional content" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
                 <Button.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
@@ -126,8 +127,11 @@
                     </ResourceDictionary>
                 </Button.Resources>
             </Button>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Options" Style="{StaticResource MainButton}">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="576">
+                <Button Style="{StaticResource MainButton}" Width="228">
+                    <Viewbox MaxHeight="70" MaxWidth="70">
+                        <SymbolIcon Symbol="Cancel"/>
+                    </Viewbox>
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
@@ -159,7 +163,10 @@
                         </ResourceDictionary>
                     </Button.Resources>
                 </Button>
-                <Button Content="Exit" Style="{StaticResource MainButton}">
+                <Button Style="{StaticResource MainButton}" Width="228">
+                    <Viewbox MaxHeight="70" MaxWidth="70">
+                        <SymbolIcon Symbol="Setting" />
+                    </Viewbox>
                     <Button.Resources>
                         <ResourceDictionary>
                             <ResourceDictionary.ThemeDictionaries>
