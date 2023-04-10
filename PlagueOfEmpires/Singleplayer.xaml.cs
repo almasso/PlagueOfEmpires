@@ -53,5 +53,10 @@ namespace PlagueOfEmpires
 
             }
         }
+
+        private void NewGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(PregameMenu));
+        }
     }
 }
