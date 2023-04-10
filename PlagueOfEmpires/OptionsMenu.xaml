@@ -284,7 +284,7 @@
                             <StaticResource ResourceKey="MenuButton"/>
                         </Button.Style>
                     </Button>
-                    <Button Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" >
+                    <Button Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="BackButton_OnClick" >
                         <Viewbox MaxHeight="30" MaxWidth="30">
                             <SymbolIcon Symbol="Back" Height="13"/>
                         </Viewbox>
