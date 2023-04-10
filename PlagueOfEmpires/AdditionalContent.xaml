@@ -102,45 +102,54 @@
 
     <Grid KeyUp="ReturnWithEscape" PointerPressed="ReturnWithLeftClick">
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Image Grid.RowSpan="2" Stretch="Fill" Source="./Assets/Fondo.png" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill" Source="./Assets/Fondo.png" />
 
-        <Border Background="White" Margin="50" Width="1250">
-            <Grid>
-                <Border x:Name="ShadowTarget"/>
-                <TextBlock Text="PLAGUE OF EMPIRES" FontSize="120" FontFamily="{StaticResource Aboreto}" Foreground="Red" HorizontalAlignment="Center" FontWeight="ExtraBold" ui:Effects.Shadow="{StaticResource CommonShadow}"/>
-            </Grid>
-        </Border>
+        <Viewbox Grid.ColumnSpan="2">
+            <Border Background="White" Margin="50" Width="1250">
+                <Grid>
+                    <Border x:Name="ShadowTarget"/>
+                    <TextBlock Text="PLAGUE OF EMPIRES" FontSize="120" FontFamily="{StaticResource Aboreto}" Foreground="Red" HorizontalAlignment="Center" FontWeight="ExtraBold" ui:Effects.Shadow="{StaticResource CommonShadow}"/>
+                </Grid>
+            </Border>
+        </Viewbox>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,55,0,0" x:Name="BotonesPrincipales">
-                <Button Content="Singleplayer" Style="{StaticResource MainButton}" Height="95" IsEnabled="False"/>
-                <Button Content="Multiplayer" Style="{StaticResource MainButton}" IsEnabled="False"/>
-                <Button Style="{StaticResource MainButton}" FontSize="40">
-                    <TextBlock Text="Mods &amp; additional content" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
-                </Button>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="576">
-                    <Button Style="{StaticResource MainButton}" Width="228" IsEnabled="False">
-                        <Viewbox MaxHeight="70" MaxWidth="70">
-                            <SymbolIcon Symbol="Cancel"/>
-                        </Viewbox>
+        <Viewbox Grid.Row="1">
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,55,0,0" x:Name="BotonesPrincipales">
+                    <Button Content="Singleplayer" Style="{StaticResource MainButton}" Height="95" IsEnabled="False"/>
+                    <Button Content="Multiplayer" Style="{StaticResource MainButton}" IsEnabled="False"/>
+                    <Button Style="{StaticResource MainButton}" FontSize="40">
+                        <TextBlock Text="Mods &amp; additional content" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
                     </Button>
-                    <Button Style="{StaticResource MainButton}" Width="228" IsEnabled="False">
-                        <Viewbox MaxHeight="70" MaxWidth="70">
-                            <SymbolIcon Symbol="Setting" />
-                        </Viewbox>
-                    </Button>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="576">
+                        <Button Style="{StaticResource MainButton}" Width="228" IsEnabled="False">
+                            <Viewbox MaxHeight="70" MaxWidth="70">
+                                <SymbolIcon Symbol="Cancel"/>
+                            </Viewbox>
+                        </Button>
+                        <Button Style="{StaticResource MainButton}" Width="228" IsEnabled="False">
+                            <Viewbox MaxHeight="70" MaxWidth="70">
+                                <SymbolIcon Symbol="Setting" />
+                            </Viewbox>
+                        </Button>
+                    </StackPanel>
                 </StackPanel>
+                <Canvas Margin="0,0,50,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Polyline Stroke="White" StrokeThickness="5" Points="-33,450 50,350"/>
+                    <Polyline Stroke="White" StrokeThickness="5" Points="50,80 50,670"/>
+                    <Polyline Stroke="White" StrokeThickness="5" Points="47,80 97,80"/>
+                    <Polyline Stroke="White" StrokeThickness="5" Points="47,670 97,670"/>
+                </Canvas>
             </StackPanel>
-            <Canvas Margin="0,0,50,0" HorizontalAlignment="Center" VerticalAlignment="Top">
-                <Polyline Stroke="White" StrokeThickness="5" Points="-33,450 50,350"/>
-                <Polyline Stroke="White" StrokeThickness="5" Points="50,80 50,670"/>
-                <Polyline Stroke="White" StrokeThickness="5" Points="47,80 97,80"/>
-                <Polyline Stroke="White" StrokeThickness="5" Points="47,670 97,670"/>
-            </Canvas>
-            <ListView ItemTemplate="{StaticResource DLC_Content}" ItemsSource="123456789ABCD"  SelectionMode="None" IsItemClickEnabled="False" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,100,0,150"/>
-        </StackPanel>
+        </Viewbox>
+        <ListView Grid.Row="1" Grid.Column="1" ItemTemplate="{StaticResource DLC_Content}" ItemsSource="123456789ABCD" SelectionMode="None" IsItemClickEnabled="False" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,100,0,100"/>
+
     </Grid>
 </Page>

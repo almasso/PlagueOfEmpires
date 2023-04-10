@@ -11,9 +11,9 @@
 
     <Grid>
         <Image Grid.RowSpan="2" Stretch="Fill" Source="./Assets/Fondo.png" />
-        
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Height="800"  Width="800">
-            
+
+        <Viewbox>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Height="800"  Width="800">
             <Border Width="200">
                 <Border.Background>
                     <media:RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
@@ -107,7 +107,7 @@
 
             </StackPanel>
         </StackPanel>
-
+        </Viewbox>
 
     </Grid>
 </Page>

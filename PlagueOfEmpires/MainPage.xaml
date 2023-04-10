@@ -16,37 +16,42 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Image Grid.RowSpan="2" Stretch="Fill" Source="./Assets/Fondo.png" />
 
-        <Border Background="White" Margin="50" Width="1250">
-            <Grid>
-                <Border x:Name="ShadowTarget"/>
-                <TextBlock Text="PLAGUE OF EMPIRES" FontSize="120" FontFamily="{StaticResource Aboreto}" Foreground="Red" HorizontalAlignment="Center" FontWeight="ExtraBold" ui:Effects.Shadow="{StaticResource CommonShadow}"/>
-            </Grid>
-        </Border>
+        <Viewbox>
+            <Border Background="White" Margin="50" Width="1250">
+                <Grid>
+                    <Border x:Name="ShadowTarget"/>
+                    <TextBlock Text="PLAGUE OF EMPIRES" FontSize="120" FontFamily="{StaticResource Aboreto}" Foreground="Red" HorizontalAlignment="Center" FontWeight="ExtraBold" ui:Effects.Shadow="{StaticResource CommonShadow}"/>
+                </Grid>
+            </Border>
+        </Viewbox>
 
-        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Content="Singleplayer" Style="{StaticResource MainButton}" Height="95" Click="Singleplayer_Button"/>
-            <Button Content="Multiplayer" Style="{StaticResource MainButton}" Click="Multiplayer_Button"/>
-            <Button Style="{StaticResource MainButton}" FontSize="40" Click="DLC_Button">
-                <TextBlock Text="Mods &amp; additional content" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
-            </Button>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="576">
-                <Button Style="{StaticResource MainButton}" Width="228">
-                    <Viewbox MaxHeight="70" MaxWidth="70">
-                        <SymbolIcon Symbol="Cancel"/>
-                    </Viewbox>
+        <Viewbox Grid.Row="1">
+            <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Content="Singleplayer" Style="{StaticResource MainButton}" Height="95" Click="Singleplayer_Button"/>
+                <Button Content="Multiplayer" Style="{StaticResource MainButton}" Click="Multiplayer_Button"/>
+                <Button Style="{StaticResource MainButton}" FontSize="40" Click="DLC_Button">
+                    <TextBlock Text="Mods &amp; additional content" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
                 </Button>
-                <Button Style="{StaticResource MainButton}" Click="Options_OnClick" Width="228">
-                    <Viewbox MaxHeight="70" MaxWidth="70">
-                        <SymbolIcon Symbol="Setting" />
-                    </Viewbox>
-                </Button>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="576">
+                    <Button Style="{StaticResource MainButton}" Width="228">
+                        <Viewbox MaxHeight="70" MaxWidth="70">
+                            <SymbolIcon Symbol="Cancel"/>
+                        </Viewbox>
+                    </Button>
+                    <Button Style="{StaticResource MainButton}" Click="Options_OnClick" Width="228">
+                        <Viewbox MaxHeight="70" MaxWidth="70">
+                            <SymbolIcon Symbol="Setting" />
+                        </Viewbox>
+                    </Button>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
+        </Viewbox>
+        
 
     </Grid>
 </Page>
