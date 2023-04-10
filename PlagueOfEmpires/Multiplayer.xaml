@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="PlagueOfEmpires.Multiplayer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PlagueOfEmpires"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    xmlns:ui="using:Microsoft.Toolkit.Uwp.UI">
+
+    <Page.Resources>
+        <ui:AttachedDropShadow x:Name="CommonShadow" Offset="0,10,0" Color="Gray" Opacity="1" CastTo="{x:Bind ShadowTarget}" IsMasked="True"/>
+    </Page.Resources>
+
+    <Grid KeyUp="ReturnWithEscape" PointerPressed="ReturnWithLeftClick">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Grid.RowSpan="2" Stretch="Fill" Source="./Assets/Fondo.png" />
+
+        <Border Background="White" Margin="50" Width="1250">
+            <Grid>
+                <Border x:Name="ShadowTarget"/>
+                <TextBlock Text="PLAGUE OF EMPIRES" FontSize="120" FontFamily="{StaticResource Aboreto}" Foreground="Red" HorizontalAlignment="Center" FontWeight="ExtraBold" ui:Effects.Shadow="{StaticResource CommonShadow}"/>
+            </Grid>
+        </Border>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,55,0,0" x:Name="BotonesPrincipales">
+                <Button Content="Singleplayer" Style="{StaticResource MainButton}" Height="95" IsEnabled="False"/>
+                <Button Content="Multiplayer" Style="{StaticResource MainButton}"/>
+                <Button Style="{StaticResource MainButton}" FontSize="40" IsEnabled="False">
+                    <TextBlock Text="Mods &amp; additional content" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
+                </Button>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="576">
+                    <Button Style="{StaticResource MainButton}" Width="228" IsEnabled="False">
+                        <Viewbox MaxHeight="70" MaxWidth="70">
+                            <SymbolIcon Symbol="Cancel"/>
+                        </Viewbox>
+                    </Button>
+                    <Button Style="{StaticResource MainButton}" Width="228" IsEnabled="False">
+                        <Viewbox MaxHeight="70" MaxWidth="70">
+                            <SymbolIcon Symbol="Setting" />
+                        </Viewbox>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+            <Canvas Margin="0,0,50,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Polyline Stroke="White" StrokeThickness="5" Points="-33,300 50,300"/>
+                <Polyline Stroke="White" StrokeThickness="5" Points="50,150 50,450"/>
+                <Polyline Stroke="White" StrokeThickness="5" Points="47,150 97,150"/>
+                <Polyline Stroke="White" StrokeThickness="5" Points="47,450 97,450"/>
+            </Canvas>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,140,0,0">
+                <Button Content="Local multiplayer" Style="{StaticResource MainButton}" HorizontalAlignment="Right"/>
+                <Button Content="Online multiplayer" Style="{StaticResource MainButton}" HorizontalAlignment="Right"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>

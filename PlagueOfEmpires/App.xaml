@@ -5,29 +5,68 @@
     xmlns:local="using:PlagueOfEmpires"
     xmlns:media="using:Microsoft.Toolkit.Uwp.UI.Media">
     <Application.Resources>
-        <FontFamily x:Key="Aboreto">./Fonts/Aboreto-Regular.ttf#Aboreto</FontFamily>
+        <ResourceDictionary>
+            <FontFamily x:Key="Aboreto">./Fonts/Aboreto-Regular.ttf#Aboreto</FontFamily>
 
-        <Style x:Key="MainButton" TargetType="Button">
-            <Setter Property="FontFamily" Value="{StaticResource Aboreto}"/>
-            <Setter Property="FontSize" Value="50"/>
-            <Setter Property="FontWeight" Value="ExtraBold"/>
-            <Setter Property="Background">
-                <Setter.Value>
-                    <media:RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
-                        <GradientStop Color="#f70000" Offset="0"/>
-                        <GradientStop Color="#8b0707" Offset="1"/>
+            <Style x:Key="MainButton" TargetType="Button">
+                <Setter Property="FontFamily" Value="{StaticResource Aboreto}"/>
+                <Setter Property="FontSize" Value="50"/>
+                <Setter Property="FontWeight" Value="ExtraBold"/>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <media:RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                            <GradientStop Color="#f70000" Offset="0"/>
+                            <GradientStop Color="#8b0707" Offset="1"/>
+                        </media:RadialGradientBrush>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="30 30"/>
+                <Setter Property="Width" Value="576"/>
+                <Setter Property="Height" Value="100"/>
+                <Setter Property="CornerRadius" Value="50"/>
+                <Setter Property="BorderThickness" Value="0"/>
+            </Style>
+            
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                    <media:RadialGradientBrush x:Key="ButtonBackgroundPointerOver" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                        <GradientStop Color="#FFC30101" Offset="0"/>
+                        <GradientStop Color="#FF5D0202" Offset="1"/>
                     </media:RadialGradientBrush>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Margin" Value="30 30"/>
-            <Setter Property="Width" Value="576"/>
-            <Setter Property="Height" Value="100"/>
-            <Setter Property="CornerRadius" Value="50"/>
-            <Setter Property="BorderThickness" Value="0"/>
-        </Style>
+                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                    <media:RadialGradientBrush x:Key="ButtonBackgroundPressed" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                        <GradientStop Color="#FFC30101" Offset="0"/>
+                        <GradientStop Color="#FF5D0202" Offset="1"/>
+                    </media:RadialGradientBrush>
+                    <SolidColorBrush x:Key="ButtonForegroundDisabled" Color="#7FFFFFFF"/>
+                    <media:RadialGradientBrush x:Key="ButtonBackgroundDisabled" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                        <GradientStop Color="#7FF70000" Offset="0"/>
+                        <GradientStop Color="#7F8B0707" Offset="1"/>
+                    </media:RadialGradientBrush>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                    <media:RadialGradientBrush x:Key="ButtonBackgroundPointerOver" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                        <GradientStop Color="#FFC30101" Offset="0"/>
+                        <GradientStop Color="#FF5D0202" Offset="1"/>
+                    </media:RadialGradientBrush>
+                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                    <media:RadialGradientBrush x:Key="ButtonBackgroundPressed" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                        <GradientStop Color="#FFC30101" Offset="0"/>
+                        <GradientStop Color="#FF5D0202" Offset="1"/>
+                    </media:RadialGradientBrush>
+                    <SolidColorBrush x:Key="ButtonForegroundDisabled" Color="#7FFFFFFF"/>
+                    <media:RadialGradientBrush x:Key="ButtonBackgroundDisabled" Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                        <GradientStop Color="#7FF70000" Offset="0"/>
+                        <GradientStop Color="#7F8B0707" Offset="1"/>
+                    </media:RadialGradientBrush>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 
 </Application>

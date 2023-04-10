@@ -26,5 +26,20 @@ namespace PlagueOfEmpires
         {
             this.InitializeComponent();
         }
+
+        private void Singleplayer_Button(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Singleplayer));
+        }
+
+        private void Multiplayer_Button(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Multiplayer));
+        }
+
+        private void DLC_Button(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AdditionalContent));
+        }
     }
 }
