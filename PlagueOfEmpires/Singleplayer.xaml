@@ -54,7 +54,7 @@
                 <Polyline Stroke="White" StrokeThickness="5" Points="47,520 97,520"/>
             </Canvas>
             <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,55,0,0">
-                <Button Content="New game" Style="{StaticResource MainButton}" HorizontalAlignment="Right"/>
+                <Button Content="New game" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="NewGameButton_Click"/>
                 <Button Content="Continue game" Style="{StaticResource MainButton}" HorizontalAlignment="Right"/>
                 <Button Content="Load game" Style="{StaticResource MainButton}" HorizontalAlignment="Right"/>
             </StackPanel>

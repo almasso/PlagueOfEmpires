@@ -13,8 +13,8 @@
         <Image Grid.RowSpan="2" Stretch="Fill" Source="./Assets/Fondo.png" />
         
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Height="800"  Width="800">
-            
-            <Border Width="200">
+
+            <Border Width="200" BorderBrush="#8b0707" BorderThickness="5">
                 <Border.Background>
                     <media:RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
                         <media:RadialGradientBrush.GradientStops>
@@ -43,8 +43,8 @@
             </Border>
 
             <StackPanel VerticalAlignment="Stretch" Orientation="Vertical" Width="600">
-                
-                <Border Height="100">
+
+                <Border Height="100" BorderBrush="#8b0707" BorderThickness="5">
                     <Border.Background>
                         <media:RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
                             <media:RadialGradientBrush.GradientStops>
