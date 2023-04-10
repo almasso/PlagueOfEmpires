@@ -41,7 +41,7 @@ namespace PlagueOfEmpires
         private void DLC_Button(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(AdditionalContent));
-	}
+	    }
 
         private void Options_OnClick(object sender, RoutedEventArgs e)
         {
