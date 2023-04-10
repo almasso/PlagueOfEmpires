@@ -163,7 +163,7 @@
                         </ResourceDictionary>
                     </Button.Resources>
                 </Button>
-                <Button Style="{StaticResource MainButton}" Width="228">
+                <Button Style="{StaticResource MainButton}" Click="Options_OnClick" Width="228">
                     <Viewbox MaxHeight="70" MaxWidth="70">
                         <SymbolIcon Symbol="Setting" />
                     </Viewbox>
