@@ -34,5 +34,10 @@ namespace PlagueOfEmpires
                 Frame.GoBack();
             }
         }
+
+        private void PlayButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainGame));
+        }
     }
 }

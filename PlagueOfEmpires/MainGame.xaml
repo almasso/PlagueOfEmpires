@@ -1,0 +1,252 @@
+﻿<Page
+    x:Class="PlagueOfEmpires.MainGame"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PlagueOfEmpires"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    xmlns:media="using:Microsoft.Toolkit.Uwp.UI.Media"
+    xmlns:compos="using:Windows.UI.Composition">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ResourceButtons" TargetType="Button">
+                <Setter Property="FontFamily" Value="{StaticResource Aboreto}"/>
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Foreground" Value="#8b0707"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="#8b0707"/>
+                <Setter Property="Margin" Value="1,0,1,0"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.RowSpan="4" Grid.ColumnSpan="3" Stretch="Fill" Source="./Assets/FondoTablero.jpg" />
+
+        <Viewbox Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <Grid BorderBrush="#8b0707" BorderThickness="2">
+                <Grid.Background>
+                    <media:RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                        <GradientStop Color="#f70000" Offset="0"/>
+                        <GradientStop Color="#e61610" Offset="1"/>
+                    </media:RadialGradientBrush>
+                </Grid.Background>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock Text="TOTAL POPULATION: 6.021.000" FontFamily="{StaticResource Aboreto}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" TextAlignment="Center" HorizontalTextAlignment="Center" FontWeight="Bold"/>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="700" Margin="100,0,1,0">
+                    <Button Content="Resource 1" Style="{StaticResource ResourceButtons}"/>
+                    <Button Content="Resource 2" Style="{StaticResource ResourceButtons}"/>
+                    <Button Content="Resource 3" Style="{StaticResource ResourceButtons}"/>
+                    <Button Content="Resource 4" Style="{StaticResource ResourceButtons}"/>
+                    <Button Content="Resource 5" Style="{StaticResource ResourceButtons}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock Grid.Column="2" Text="Local Time: 21:53" FontFamily="{StaticResource Aboreto}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="10" TextAlignment="Center" HorizontalTextAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock Grid.Column="2" Text="Remaining Time: 15:00" FontFamily="{StaticResource Aboreto}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="10" TextAlignment="Center" HorizontalTextAlignment="Center" FontWeight="Bold"/>
+                </StackPanel>
+            </Grid>
+        </Viewbox>
+
+        <Viewbox Grid.Row="1" Width="250" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button CornerRadius="50" Padding="-2" Background="White">
+                    <Ellipse Width="15" Height="15" Stroke="#8b0707" StrokeThickness="1">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="Assets/Virus1.png"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </Button>
+                <Button CornerRadius="50" Padding="-2" Background="White">
+                    <Ellipse Width="20" Height="20" Stroke="#8b0707">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="Assets/Virus2.png"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </Button>
+                <Button CornerRadius="50" Padding="-2" Background="White">
+                    <Ellipse Width="15" Height="15" Stroke="#8b0707">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="Assets/Virus3.png"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+
+        <Viewbox Grid.Column="2" Grid.Row="1"  Width="100" Height="100" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Button Background="Transparent">
+                <SymbolIcon Symbol="Setting"/>
+            </Button>
+        </Viewbox>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Viewbox Grid.Column="1" Width="250" Height="50" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button CornerRadius="50" Padding="20" BorderBrush="#8b0707" BorderThickness="10" Margin="0,0,30,0">
+                        <Button.Background>
+                            <media:RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                <GradientStop Color="#FF11A2CA" Offset="0"/>
+                                <GradientStop Color="#FF05586F" Offset="1"/>
+                            </media:RadialGradientBrush>
+                        </Button.Background>
+                        <Viewbox Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <SymbolIcon Symbol="ReportHacked" Foreground="White"/>
+                        </Viewbox>
+                    </Button>
+                    <Button CornerRadius="50" Padding="20" BorderBrush="#8b0707" BorderThickness="10">
+                        <Button.Background>
+                            <media:RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                <GradientStop Color="#FF11A2CA" Offset="0"/>
+                                <GradientStop Color="#FF05586F" Offset="1"/>
+                            </media:RadialGradientBrush>
+                        </Button.Background>
+                        <Viewbox Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <SymbolIcon Symbol="Add" Foreground="White"/>
+                        </Viewbox>
+                    </Button>
+                </StackPanel>
+            </Viewbox>
+            <Viewbox Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel Orientation="Vertical">
+                    <Button Content="Structure type 1" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
+                    <Button Content="Structure type 2" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
+                    <Button Content="Structure type 3" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
+                    <Button Content="Structure type 4" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
+                    <Button Content="Structure type 5" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
+                    <Button Content="Structure type 6" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
+                    <Button Content="Structure type 7" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
+                    </StackPanel>
+            </Viewbox>
+            <Grid Grid.Row="1" Grid.Column="1" BorderBrush="#8b0707" BorderThickness="3" HorizontalAlignment="Stretch">
+                <Grid.Background>
+                    <media:RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                        <GradientStop Color="#FF11A2CA" Offset="0"/>
+                        <GradientStop Color="#FF05586F" Offset="1"/>
+                    </media:RadialGradientBrush>
+                </Grid.Background>
+                <GridView ItemsSource="1234567890ABCDEFGHIJK1234567890ABCDEFGHIJK1234567890ABCDEFGHIJK" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Background="White">
+                                <Image Source="Assets/StoreLogo.png" Width="40" Height="40"/>
+                            </Grid>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsWrapGrid MaximumRowsOrColumns="5" Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+                </GridView>
+            </Grid>
+        </Grid>
+
+        <Viewbox Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+
+                <Viewbox Grid.Column="1" Width="160" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                        <Button CornerRadius="50" Padding="20" BorderBrush="#8b0707" BorderThickness="10" Margin="0,0,30,0">
+                            <Button.Background>
+                                <media:RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FF11A2CA" Offset="0"/>
+                                    <GradientStop Color="#FF05586F" Offset="1"/>
+                                </media:RadialGradientBrush>
+                            </Button.Background>
+                            <Viewbox Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <SymbolIcon Symbol="ZoomIn" Foreground="White"/>
+                            </Viewbox>
+                        </Button>
+                        <Button CornerRadius="50" Padding="20" BorderBrush="#8b0707" BorderThickness="10" Margin="0,0,30,0">
+                            <Button.Background>
+                                <media:RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FF11A2CA" Offset="0"/>
+                                    <GradientStop Color="#FF05586F" Offset="1"/>
+                                </media:RadialGradientBrush>
+                            </Button.Background>
+                            <Viewbox Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <SymbolIcon Symbol="ZoomOut" Foreground="White"/>
+                            </Viewbox>
+                        </Button>
+                        <Button CornerRadius="50" Padding="20" BorderBrush="#8b0707" BorderThickness="10" Margin="0,0,30,0">
+                            <Button.Background>
+                                <media:RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FF11A2CA" Offset="0"/>
+                                    <GradientStop Color="#FF05586F" Offset="1"/>
+                                </media:RadialGradientBrush>
+                            </Button.Background>
+                            <Viewbox Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <SymbolIcon Symbol="MapPin" Foreground="White"/>
+                            </Viewbox>
+                        </Button>
+                        <Button CornerRadius="50" Padding="20" BorderBrush="#8b0707" BorderThickness="10" Margin="0,0,30,0">
+                            <Button.Background>
+                                <media:RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FF11A2CA" Offset="0"/>
+                                    <GradientStop Color="#FF05586F" Offset="1"/>
+                                </media:RadialGradientBrush>
+                            </Button.Background>
+                            <Viewbox Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <SymbolIcon Symbol="List" Foreground="White"/>
+                            </Viewbox>
+                        </Button>
+                        <Button CornerRadius="50" Padding="20" BorderBrush="#8b0707" BorderThickness="10">
+                            <Button.Background>
+                                <media:RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
+                                    <GradientStop Color="#FF11A2CA" Offset="0"/>
+                                    <GradientStop Color="#FF05586F" Offset="1"/>
+                                </media:RadialGradientBrush>
+                            </Button.Background>
+                            <Viewbox Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <SymbolIcon Symbol="Add" Foreground="White"/>
+                            </Viewbox>
+                        </Button>
+                    </StackPanel>
+                </Viewbox>
+
+                <Viewbox Grid.Row="1">
+                    <Grid BorderBrush="#8b0707" BorderThickness="5">
+                        <Image Source="Assets/mapa.png" Stretch="Fill"/>
+                    </Grid>
+                </Viewbox>
+            </Grid>
+        </Viewbox>
+        
+
+    </Grid>
+    
+</Page>
