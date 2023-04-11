@@ -10,43 +10,45 @@
 
     <Grid>
         <Image Stretch="Fill" Source="./Assets/Fondo.png" />
-        <StackPanel Orientation="Vertical" Margin="150">
-            <Border VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="110" BorderBrush="#8b0707" BorderThickness="5">
-                <Border.Background>
-                    <media:RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
-                        <media:RadialGradientBrush.GradientStops>
-                            <GradientStop Color="#f70000" Offset="0.1" />
-                            <GradientStop Color="#730404" Offset="1" />
-                        </media:RadialGradientBrush.GradientStops>
-                    </media:RadialGradientBrush>
-                </Border.Background>
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                    <TextBlock Text="PAUSE" FontSize="60" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="500 0 0 0"/>
-                    <Button Style="{StaticResource MenuButton}" Width="140" VerticalAlignment="Center" Margin="350 0 0 0" Click="BackButton_OnClick" Height="50" >
-                        <Viewbox MaxHeight="30" MaxWidth="30">
-                            <SymbolIcon Symbol="Back" Height="17"/>
-                        </Viewbox>
-                    </Button>
-                </StackPanel>
-            </Border>
+        <Viewbox>
+            <StackPanel Orientation="Vertical" Margin="150">
+                <Border VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="110" BorderBrush="#8b0707" BorderThickness="5">
+                    <Border.Background>
+                        <media:RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                            <media:RadialGradientBrush.GradientStops>
+                                <GradientStop Color="#f70000" Offset="0.1" />
+                                <GradientStop Color="#730404" Offset="1" />
+                            </media:RadialGradientBrush.GradientStops>
+                        </media:RadialGradientBrush>
+                    </Border.Background>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <TextBlock Text="PAUSE" FontSize="60" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="500 0 0 0"/>
+                        <Button Style="{StaticResource MenuButton}" Width="140" VerticalAlignment="Center" Margin="350 0 0 0" Click="BackButton_OnClick" Height="50" >
+                            <Viewbox MaxHeight="30" MaxWidth="30">
+                                <SymbolIcon Symbol="Back" Height="17"/>
+                            </Viewbox>
+                        </Button>
+                    </StackPanel>
+                </Border>
 
-            <Border HorizontalAlignment="Stretch" Height="590" BorderBrush="#8b0707" BorderThickness="5">
-                <Border.Background>
-                    <media:RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
-                        <media:RadialGradientBrush.GradientStops>
-                            <GradientStop Color="#0a82a4" Offset="0" />
-                            <GradientStop Color="#082d38" Offset="1" />
-                        </media:RadialGradientBrush.GradientStops>
-                    </media:RadialGradientBrush>
-                </Border.Background>
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Button Content="RESUME" Style="{StaticResource MainButton}" FontSize="35" Width="500" Height="70" CornerRadius="40" Margin="20 90 20 20" Click="Button_Click_2"/>
-                    <Button Content="SAVE" Style="{StaticResource MainButton}" FontSize="35" Width="500" Height="70" CornerRadius="40" Margin="20"/>
-                    <Button Content="MAIN MENU" Style="{StaticResource MainButton}" FontSize="35" Width="500" Height="70" CornerRadius="40" Margin="20" Click="Button_Click"/>
-                    <Button Content="SETTINGS" Style="{StaticResource MainButton}" FontSize="35" Width="500" Height="70" CornerRadius="40" Margin="20" Click="Button_Click_1"/>
+                <Border HorizontalAlignment="Stretch" Height="590" BorderBrush="#8b0707" BorderThickness="5">
+                    <Border.Background>
+                        <media:RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                            <media:RadialGradientBrush.GradientStops>
+                                <GradientStop Color="#0a82a4" Offset="0" />
+                                <GradientStop Color="#082d38" Offset="1" />
+                            </media:RadialGradientBrush.GradientStops>
+                        </media:RadialGradientBrush>
+                    </Border.Background>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Button Content="RESUME" Style="{StaticResource MainButton}" FontSize="35" Width="500" Height="70" CornerRadius="40" Margin="20 90 20 20" Click="Button_Click_2"/>
+                        <Button Content="SAVE" Style="{StaticResource MainButton}" FontSize="35" Width="500" Height="70" CornerRadius="40" Margin="20"/>
+                        <Button Content="MAIN MENU" Style="{StaticResource MainButton}" FontSize="35" Width="500" Height="70" CornerRadius="40" Margin="20" Click="Button_Click"/>
+                        <Button Content="SETTINGS" Style="{StaticResource MainButton}" FontSize="35" Width="500" Height="70" CornerRadius="40" Margin="20" Click="Button_Click_1"/>
 
-                </StackPanel>
-            </Border>
-        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Viewbox>
     </Grid>
 </Page>
