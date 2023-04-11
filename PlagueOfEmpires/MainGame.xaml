@@ -379,7 +379,10 @@
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <Viewbox Width="50" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <Rectangle Stroke="#FFE4E60B" StrokeThickness="4" Width="100" Height="100"/>
+                        <Grid>
+                            <Rectangle Stroke="#FFE4E60B" StrokeThickness="4" Width="100" Height="100"/>
+                            <ProgressBar Background="White" Foreground="Red" Value="75" Width="70" Height="10"/>
+                        </Grid>
                     </Viewbox>
                 </DataTemplate>
             </GridView.ItemTemplate>
