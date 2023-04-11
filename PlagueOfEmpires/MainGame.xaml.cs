@@ -31,5 +31,10 @@ namespace PlagueOfEmpires
         {
             Frame.Navigate(typeof(PauseMenu));
         }
+
+        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

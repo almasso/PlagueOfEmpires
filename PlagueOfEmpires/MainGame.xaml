@@ -26,9 +26,9 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="3*"/>
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="9*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -37,6 +37,10 @@
         </Grid.ColumnDefinitions>
 
         <Image Grid.RowSpan="4" Grid.ColumnSpan="3" Stretch="Fill" Source="./Assets/FondoTablero.jpg" />
+
+        <Viewbox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Stretch="Fill" Grid.RowSpan="3">
+            <Image Source="Assets/mano.png"/>
+        </Viewbox>
 
         <Viewbox Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Top">
             <Grid BorderBrush="#8b0707" BorderThickness="2">
@@ -245,7 +249,166 @@
                 </Viewbox>
             </Grid>
         </Viewbox>
-        
+
+        <GridView Margin="150,0,0,0" ItemsSource="1234" Grid.Row="1" HorizontalAlignment="Center" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="2"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Viewbox Width="50" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Rectangle Stroke="#FF3B99D4" StrokeThickness="4" Width="100" Height="100"/>
+                    </Viewbox>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <!--<Setter Property="Margin" Value="-27,0,0,0"/>-->
+                </Style>
+            </GridView.ItemContainerStyle>
+        </GridView>
+
+        <GridView Margin="370,0,0,0" ItemsSource="1234" Grid.Row="1" HorizontalAlignment="Center" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="2"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Viewbox Width="50" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Rectangle Stroke="#FF811ADC" StrokeThickness="4" Width="100" Height="100"/>
+                    </Viewbox>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <!--<Setter Property="Margin" Value="-27,0,0,0"/>-->
+                </Style>
+            </GridView.ItemContainerStyle>
+        </GridView>
+
+        <GridView Margin="0,0,0,0" ItemsSource="1234" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="2"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Viewbox Width="50" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Rectangle Stroke="#FF811ADC" StrokeThickness="4" Width="100" Height="100"/>
+                    </Viewbox>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <!--<Setter Property="Margin" Value="-27,0,0,0"/>-->
+                </Style>
+            </GridView.ItemContainerStyle>
+        </GridView>
+
+        <GridView Margin="110,0,0,0" ItemsSource="1234" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="2"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Viewbox Width="50" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Rectangle Stroke="#FF811ADC" StrokeThickness="4" Width="100" Height="100"/>
+                    </Viewbox>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <!--<Setter Property="Margin" Value="-27,0,0,0"/>-->
+                </Style>
+            </GridView.ItemContainerStyle>
+        </GridView>
+
+        <GridView Margin="220,0,0,0" ItemsSource="123" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="2"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Viewbox Width="50" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Rectangle Stroke="#FF811ADC" StrokeThickness="4" Width="100" Height="100"/>
+                    </Viewbox>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <!--<Setter Property="Margin" Value="-27,0,0,0"/>-->
+                </Style>
+            </GridView.ItemContainerStyle>
+        </GridView>
+
+        <GridView Margin="150,0,0,0" ItemsSource="1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ1234" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="10"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Viewbox Width="50" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Rectangle Stroke="#FF3FAD18" StrokeThickness="4" Width="100" Height="100"/>
+                    </Viewbox>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <!--<Setter Property="Margin" Value="-27,0,0,0"/>-->
+                </Style>
+            </GridView.ItemContainerStyle>
+        </GridView>
+
+        <GridView Margin="250,220,0,0" ItemsSource="1234567890ABCDEFGHIJ" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="10"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Viewbox Width="50" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Rectangle Stroke="#FFE4E60B" StrokeThickness="4" Width="100" Height="100"/>
+                    </Viewbox>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <!--<Setter Property="Margin" Value="-27,0,0,0"/>-->
+                </Style>
+            </GridView.ItemContainerStyle>
+        </GridView>
+
+        <GridView Margin="0,0,0,0" ItemsSource="1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJKLMNOPQRSTUV" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="10"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Viewbox Width="50" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Rectangle Stroke="#FFE61F0B" StrokeThickness="4" Width="100" Height="100"/>
+                    </Viewbox>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <!--<Setter Property="Margin" Value="-27,0,0,0"/>-->
+                </Style>
+            </GridView.ItemContainerStyle>
+        </GridView>
 
     </Grid>
     

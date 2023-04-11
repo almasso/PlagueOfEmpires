@@ -154,6 +154,7 @@
     <Content Include="Assets\body.png" />
     <Content Include="Assets\Fondo.png" />
     <Content Include="Assets\FondoTablero.jpg" />
+    <Content Include="Assets\mano.png" />
     <Content Include="Assets\mapa.png" />
     <Content Include="Assets\Virus1.png" />
     <Content Include="Assets\Virus2.png" />
