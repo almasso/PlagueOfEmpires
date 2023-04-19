@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -57,6 +58,18 @@ namespace PlagueOfEmpires
         private void NewGameButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(PregameMenu));
+        }
+
+        private async void ContinueButton_Click(object sender, RoutedEventArgs e)
+        {
+            var messageDialog = new MessageDialog("We couldn't find an available game for you to continue");
+            await messageDialog.ShowAsync();
+        }
+
+        private async void LoadGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            var messageDialog = new MessageDialog("We couldn't find any saved games to load");
+            await messageDialog.ShowAsync();
         }
     }
 }

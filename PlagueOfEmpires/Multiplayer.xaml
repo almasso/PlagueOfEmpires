@@ -57,8 +57,8 @@
                     <Polyline Stroke="White" StrokeThickness="5" Points="47,450 97,450"/>
                 </Canvas>
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,140,0,0">
-                    <Button Content="Local multiplayer" Style="{StaticResource MainButton}" HorizontalAlignment="Right"/>
-                    <Button Content="Online multiplayer" Style="{StaticResource MainButton}" HorizontalAlignment="Right"/>
+                    <Button Content="Local multiplayer" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="LocalButton_Click"/>
+                    <Button Content="Online multiplayer" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="OnlineButton_Click"/>
                 </StackPanel>
             </StackPanel>
         </Viewbox>

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -52,6 +53,18 @@ namespace PlagueOfEmpires
                 }
                 
             } 
+        }
+
+        private async void LocalButton_Click(object sender, RoutedEventArgs e)
+        {
+            var messageDialog = new MessageDialog("We couldn't find another player.\nPlease try again later.");
+            await messageDialog.ShowAsync();
+        }
+
+        private async void OnlineButton_Click(object sender, RoutedEventArgs e)
+        {
+            var messageDialog = new MessageDialog("We couldn't find an available match.\nPlease try again later.");
+            await messageDialog.ShowAsync();
         }
     }
 }
