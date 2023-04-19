@@ -21,11 +21,14 @@ namespace PlagueOfEmpires
     /// <summary>
     /// Página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
+    
     public sealed partial class MainPage : Page
     {
+        Controlador gameController;
         public MainPage()
         {
             this.InitializeComponent();
+            gameController = new Controlador(this);
         }
 
         private void Singleplayer_Button(object sender, RoutedEventArgs e)
@@ -49,5 +52,7 @@ namespace PlagueOfEmpires
             // Use Frame.Navigate to go to the next page.
             Frame.Navigate(typeof(OptionsMenu));
         }
+
+        
     }
 }
