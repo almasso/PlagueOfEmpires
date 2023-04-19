@@ -131,6 +131,18 @@
     <Compile Include="Multiplayer.xaml.cs">
       <DependentUpon>Multiplayer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OptionsAccount.xaml.cs">
+      <DependentUpon>OptionsAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsControls.xaml.cs">
+      <DependentUpon>OptionsControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsGraphics.xaml.cs">
+      <DependentUpon>OptionsGraphics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsLanguaje.xaml.cs">
+      <DependentUpon>OptionsLanguaje.xaml</DependentUpon>
+    </Compile>
     <Compile Include="OptionsMenu.xaml.cs">
       <DependentUpon>OptionsMenu.xaml</DependentUpon>
     </Compile>
@@ -152,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\body.png" />
+    <Content Include="Assets\brightnessIcon.png" />
     <Content Include="Assets\Fondo.png" />
     <Content Include="Assets\FondoTablero.jpg" />
     <Content Include="Assets\mano.png" />
@@ -186,6 +199,22 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Multiplayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OptionsAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OptionsControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OptionsGraphics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OptionsLanguaje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

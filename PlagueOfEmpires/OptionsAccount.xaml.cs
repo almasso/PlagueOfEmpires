@@ -20,19 +20,16 @@ namespace PlagueOfEmpires
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class OptionsMenu : Page
+    public sealed partial class OptionsAccount : Page
     {
-        public OptionsMenu()
+        public OptionsAccount()
         {
             this.InitializeComponent();
         }
 
-        private void BackButton_OnClick(object sender, RoutedEventArgs e)
+        private void ButtonMusic_Click(object sender, RoutedEventArgs e)
         {
-            if (Frame.CanGoBack)
-            {
-                Frame.GoBack();
-            }
+            Frame.Navigate(typeof(OptionsMenu));
         }
 
         private void ButtonGraphics_Click(object sender, RoutedEventArgs e)
@@ -50,9 +47,12 @@ namespace PlagueOfEmpires
             Frame.Navigate(typeof(OptionsControls));
         }
 
-        private void ButtonAccount_Click(object sender, RoutedEventArgs e)
+        private void BackButton_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OptionsAccount));
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
         }
     }
 }

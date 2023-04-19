@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -21,9 +20,9 @@ namespace PlagueOfEmpires
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class PregameMenu : Page
+    public sealed partial class OptionsGraphics : Page
     {
-        public PregameMenu()
+        public OptionsGraphics()
         {
             this.InitializeComponent();
         }
@@ -36,40 +35,24 @@ namespace PlagueOfEmpires
             }
         }
 
-        private void PlayButton_OnClick(object sender, RoutedEventArgs e)
+        private void ButtonMusic_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainGame));
+            Frame.Navigate(typeof(OptionsMenu));
         }
 
-        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        private void ButtonLanguaje_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(OptionsLanguaje));
         }
 
-        private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        private void ButtonControls_Click(object sender, RoutedEventArgs e)
         {
-            //string msg = string.Format("{0} %", e.NewValue);
-            //DifficultyTextBlock.Text = msg;
+            Frame.Navigate(typeof(OptionsControls));
         }
 
-        private void RadioButtonA_Checked(object sender, RoutedEventArgs e)
+        private void ButtonAccount_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void RadioButtonB_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RadioButtonC_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RadioButtonD_Checked(object sender, RoutedEventArgs e)
-        {
-
+            Frame.Navigate(typeof(OptionsAccount));
         }
     }
 }

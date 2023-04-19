@@ -60,26 +60,26 @@
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Orientation="Vertical" Width="110" Grid.Row="0" Grid.Column="0">
                                         <Image Source="./Assets/StoreLogo.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
-                                        <RadioButton IsChecked="True" Content="A" HorizontalAlignment="Stretch" Margin="25 0 0 0"/>
+                                        <RadioButton x:Name="A" GroupName="Type" IsChecked="False" Content="A" HorizontalAlignment="Stretch" Margin="25 0 0 0" Checked="RadioButtonA_Checked"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Vertical" Width="110" Grid.Row="1" Grid.Column="0">
                                         <Image Source="./Assets/StoreLogo.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
-                                        <RadioButton IsChecked="True" Content="C" HorizontalAlignment="Stretch" Margin="25 0 0 0"/>
+                                        <RadioButton x:Name="C" GroupName="Type" IsChecked="False" Content="C" HorizontalAlignment="Stretch" Margin="25 0 0 0" Checked="RadioButtonC_Checked"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Vertical" Width="110" Grid.Row="0" Grid.Column="1">
                                         <Image Source="./Assets/StoreLogo.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
-                                        <RadioButton IsChecked="True" Content="B" HorizontalAlignment="Stretch" Margin="25 0 0 0" />
+                                        <RadioButton x:Name="B" GroupName="Type" IsChecked="False" Content="B" HorizontalAlignment="Stretch" Margin="25 0 0 0" Checked="RadioButtonB_Checked"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Vertical" Width="110" Grid.Row="1" Grid.Column="1">
                                         <Image Source="./Assets/StoreLogo.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
-                                        <RadioButton IsChecked="True" Content="D" HorizontalAlignment="Stretch" Margin="25 0 0 0"/>
+                                        <RadioButton x:Name="D" GroupName="Type" IsChecked="False" Content="D" HorizontalAlignment="Stretch" Margin="25 0 0 0" Checked="RadioButtonD_Checked"/>
                                     </StackPanel>
                                 </Grid>
                             </Border>
                             <TextBlock Text="DIFFICULTY" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
                             <StackPanel Orientation="Horizontal">
-                                <Slider Width="380" Foreground="Red" VerticalAlignment="Center" Margin="20 10 10 10" Value="50"/>
-                                <TextBlock Text="50%" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
+                                <Slider Width="380" Foreground="Red" VerticalAlignment="Center" Margin="20 10 10 10" Value="50" ValueChanged="Slider_ValueChanged"/>
+                                <TextBlock x:Name="DifficultyTextBlock" Text="50 %" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
                             </StackPanel>
                             <TextBlock Text="CUSTOMIZE ENEMIES" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
 
@@ -136,11 +136,11 @@
                                 <StackPanel Orientation="Vertical">
                                     <TextBox Background="White" Foreground="Gray" Margin="10 20 10 15" Text="Preset 1" TextAlignment="Center" FontSize="20" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}" Width="300" Height="40" HorizontalAlignment="Center" CornerRadius="20"/>
                                     <Button Content="SAVE PRESET" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15"/>
-                                    <Button Content="SAVE PRESET" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15"/>
-                                    <Button Content="SAVE PRESET" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15"/>
+                                    <Button Content="LOAD PRESET" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15"/>
+                                    <Button Content="RANDOM PRESET" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15"/>
                                 </StackPanel>
                             </Border>
-                            <Button Content="RESET TO DEFAULT VALUES" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="60" CornerRadius="30" Margin="10"/>
+                            <Button Content="RESET TO DEFAULT VALUES" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="60" CornerRadius="30" Margin="10" Click="ResetButton_Click"/>
                             <Button Content="Play" Style="{StaticResource MainButton}" FontSize="70" Width="370" Height="120" CornerRadius="50" Margin="20 140 20 20" Click="PlayButton_OnClick"/>
                         </StackPanel>
                     </StackPanel>
