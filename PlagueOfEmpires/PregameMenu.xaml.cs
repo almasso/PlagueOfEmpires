@@ -21,8 +21,10 @@ namespace PlagueOfEmpires
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class PregameMenu : Page
+    public sealed partial class PregameMenu : Page, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        string Porcentaje = "50%";
         public PregameMenu()
         {
             this.InitializeComponent();
@@ -48,8 +50,9 @@ namespace PlagueOfEmpires
 
         private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
-            //string msg = string.Format("{0} %", e.NewValue);
-            //DifficultyTextBlock.Text = msg;
+            string msg = string.Format("{0}%", e.NewValue);
+            Porcentaje = msg;
+            PropertyChanged?.Invoke( this, new PropertyChangedEventArgs(nameof(Porcentaje)));
         }
 
         private void RadioButtonA_Checked(object sender, RoutedEventArgs e)

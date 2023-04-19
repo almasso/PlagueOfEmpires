@@ -79,7 +79,7 @@
                             <TextBlock Text="DIFFICULTY" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
                             <StackPanel Orientation="Horizontal">
                                 <Slider Width="380" Foreground="Red" VerticalAlignment="Center" Margin="20 10 10 10" Value="50" ValueChanged="Slider_ValueChanged"/>
-                                <TextBlock x:Name="DifficultyTextBlock" Text="50 %" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
+                                <TextBlock x:Name="DifficultyTextBlock" Text="{x:Bind Porcentaje, Mode=TwoWay}" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
                             </StackPanel>
                             <TextBlock Text="CUSTOMIZE ENEMIES" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
 

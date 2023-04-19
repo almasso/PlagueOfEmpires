@@ -53,6 +53,8 @@ namespace PlagueOfEmpires
             Frame.Navigate(typeof(OptionsMenu));
         }
 
+        public void ActualizaIU() { }
+
         
     }
 }

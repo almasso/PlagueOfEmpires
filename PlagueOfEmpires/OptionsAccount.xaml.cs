@@ -54,5 +54,10 @@ namespace PlagueOfEmpires
                 Frame.GoBack();
             }
         }
+
+        private void SignUpButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
