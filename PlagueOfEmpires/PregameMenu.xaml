@@ -59,19 +59,19 @@
                                         <ColumnDefinition/>
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Orientation="Vertical" Width="110" Grid.Row="0" Grid.Column="0">
-                                        <Image Source="./Assets/StoreLogo.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
-                                        <RadioButton x:Name="A" GroupName="Type" IsChecked="False" Content="A" HorizontalAlignment="Stretch" Margin="25 0 0 0" Checked="RadioButtonA_Checked"/>
+                                        <Image Source="./Assets/virusA.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
+                                        <RadioButton x:Name="A" GroupName="Type" IsChecked="True" Content="A" HorizontalAlignment="Stretch" Margin="25 0 0 0" Checked="RadioButtonA_Checked"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Vertical" Width="110" Grid.Row="1" Grid.Column="0">
-                                        <Image Source="./Assets/StoreLogo.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
+                                        <Image Source="./Assets/virusC.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
                                         <RadioButton x:Name="C" GroupName="Type" IsChecked="False" Content="C" HorizontalAlignment="Stretch" Margin="25 0 0 0" Checked="RadioButtonC_Checked"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Vertical" Width="110" Grid.Row="0" Grid.Column="1">
-                                        <Image Source="./Assets/StoreLogo.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
+                                        <Image Source="./Assets/virusB.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
                                         <RadioButton x:Name="B" GroupName="Type" IsChecked="False" Content="B" HorizontalAlignment="Stretch" Margin="25 0 0 0" Checked="RadioButtonB_Checked"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Vertical" Width="110" Grid.Row="1" Grid.Column="1">
-                                        <Image Source="./Assets/StoreLogo.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
+                                        <Image Source="./Assets/virusD.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
                                         <RadioButton x:Name="D" GroupName="Type" IsChecked="False" Content="D" HorizontalAlignment="Stretch" Margin="25 0 0 0" Checked="RadioButtonD_Checked"/>
                                     </StackPanel>
                                 </Grid>
@@ -84,24 +84,17 @@
                             <TextBlock Text="CUSTOMIZE ENEMIES" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
 
                             <ComboBox Header="Enemy1" Background="White" Foreground="Red" Margin="0" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
-                                <ComboBoxItem Content="VirusType1"/>
-                                <ComboBoxItem Content="VirusType2"/>
-                                <ComboBoxItem Content="VirusType3"/>
-                                <ComboBoxItem Content="VirusType4"/>
+                                <ComboBoxItem Content="Virus Type A"/>
+                                <ComboBoxItem Content="Virus Type B" IsSelected="True"/>
+                                <ComboBoxItem Content="Virus Type C"/>
+                                <ComboBoxItem Content="Virus Type D"/>
                             </ComboBox>
-                            <ComboBox Header="Enemy2" Background="White" Foreground="Red" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
-                                <ComboBoxItem Content="VirusType1"/>
-                                <ComboBoxItem Content="VirusType2"/>
-                                <ComboBoxItem Content="VirusType3"/>
-                                <ComboBoxItem Content="VirusType4"/>
+                            <ComboBox Header="Enemy2" Background="White" Foreground="Red" Margin="10 30 10 10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
+                                <ComboBoxItem Content="Virus Type A"/>
+                                <ComboBoxItem Content="Virus Type B"/>
+                                <ComboBoxItem Content="Virus Type C" IsSelected="True"/>
+                                <ComboBoxItem Content="Virus Type D"/>
                             </ComboBox>
-                            <ComboBox Header="Enemy3" Background="White" Foreground="Red" Margin="0" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
-                                <ComboBoxItem Content="VirusType1"/>
-                                <ComboBoxItem Content="VirusType2"/>
-                                <ComboBoxItem Content="VirusType3"/>
-                                <ComboBoxItem Content="VirusType4"/>
-                            </ComboBox>
-
                         </StackPanel>
 
                         <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" Width="470">
@@ -109,7 +102,7 @@
                             <CheckBox HorizontalAlignment="Center" Margin="100 20 0 0" Foreground="#8b0707"  />
                             <TextBlock Text="MAP SIZE" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 50 0 0"/>
                             <ComboBox Header="Tile Number" Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
-                                <ComboBoxItem Content="100 x 100"/>
+                                <ComboBoxItem Content="100 x 100" IsSelected="True"/>
                                 <ComboBoxItem Content="200 x 200"/>
                                 <ComboBoxItem Content="500 x 500"/>
                                 <ComboBoxItem Content="1000 x 1000"/>
@@ -117,31 +110,29 @@
                             <TextBlock Text="GAME SPEED" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 50 0 0"/>
                             <ComboBox Header="Progress rate" Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
                                 <ComboBoxItem Content="Slow"/>
-                                <ComboBoxItem Content="Normal"/>
+                                <ComboBoxItem Content="Normal" IsSelected="True"/>
                                 <ComboBoxItem Content="Fast"/>
                                 <ComboBoxItem Content="Expert"/>
                             </ComboBox>
                             <StackPanel Orientation="Horizontal"  Margin="0 60 0 0">
                                 <TextBlock Text="RANDOM SPAWN POINT" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White"  FontWeight="ExtraBold" VerticalAlignment="Center" Margin="110 0 0 0"/>
-                                <CheckBox  Margin="20 0 0 0" Foreground="#8b0707"/>
+                                <CheckBox x:Name="RandomSpawn" Margin="20 0 0 0" Foreground="#8b0707" Checked="MapCheckBox_OnChecked" Unchecked="MapCheckBox_OnUnchecked"/>
                             </StackPanel>
-                            <ScrollViewer  x:Name="MyScroll" Grid.Row="1" ZoomMode="Enabled" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" Width="350" Height="250" Margin="20">
+                            <ScrollViewer IsEnabled="{x:Bind isRandom, Mode=TwoWay}" x:Name="MyScroll" Grid.Row="1" ZoomMode="Enabled" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" Width="350" Height="250" Margin="20">
                                 <Image x:Name="myBody" Source="./Assets/body.png" Width="800" Height="800"/>
                             </ScrollViewer>
 
                         </StackPanel>
 
                         <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" Width="470">
-                            <Border BorderBrush="#8b0707" BorderThickness="5" Margin="40 40 40 20" Height="347" Width="380">
+                            <Border BorderBrush="#8b0707" BorderThickness="5" Margin="40 40 40 20" Height="380" Width="380">
                                 <StackPanel Orientation="Vertical">
-                                    <TextBox Background="White" Foreground="Gray" Margin="10 20 10 15" Text="Preset 1" TextAlignment="Center" FontSize="20" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}" Width="300" Height="40" HorizontalAlignment="Center" CornerRadius="20"/>
-                                    <Button Content="SAVE PRESET" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15"/>
-                                    <Button Content="LOAD PRESET" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15"/>
-                                    <Button Content="RANDOM PRESET" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15"/>
+                                    <TextBox Background="White" Foreground="Gray" Margin="10 50 10 15" Text="Preset 1" TextAlignment="Center" FontSize="20" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}" Width="300" Height="40" HorizontalAlignment="Center" CornerRadius="20"/>
+                                    <Button Content="SAVE PRESET" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15 50 15 15" Click="SavePresetButton_Click"/>
+                                    <Button Content="LOAD PRESET" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15 50 15 15" Click="LoadPresetButton_Click"/>
                                 </StackPanel>
                             </Border>
-                            <Button Content="RESET TO DEFAULT VALUES" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="60" CornerRadius="30" Margin="10" Click="ResetButton_Click"/>
-                            <Button Content="Play" Style="{StaticResource MainButton}" FontSize="70" Width="370" Height="120" CornerRadius="50" Margin="20 140 20 20" Click="PlayButton_OnClick"/>
+                            <Button Content="Play" Style="{StaticResource MainButton}" FontSize="70" Width="370" Height="120" CornerRadius="50" Margin="20 200 20 20" Click="PlayButton_OnClick"/>
                         </StackPanel>
                     </StackPanel>
                 </Border>

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,7 @@ namespace PlagueOfEmpires
     {
         public event PropertyChangedEventHandler PropertyChanged;
         string Porcentaje = "50%";
+        bool isRandom = true;
         public PregameMenu()
         {
             this.InitializeComponent();
@@ -55,6 +57,18 @@ namespace PlagueOfEmpires
             PropertyChanged?.Invoke( this, new PropertyChangedEventArgs(nameof(Porcentaje)));
         }
 
+        private void MapCheckBox_OnChecked(object sender, RoutedEventArgs e)
+        {
+            isRandom = false;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(isRandom)));
+        }
+
+        private void MapCheckBox_OnUnchecked(object sender, RoutedEventArgs e)
+        {
+            isRandom = true;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(isRandom)));
+        }
+
         private void RadioButtonA_Checked(object sender, RoutedEventArgs e)
         {
 
@@ -73,6 +87,18 @@ namespace PlagueOfEmpires
         private void RadioButtonD_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private async void SavePresetButton_Click(object sender, RoutedEventArgs e)
+        {
+            var messageDialog = new MessageDialog("Preset saved");
+            await messageDialog.ShowAsync();
+        }
+
+        private async void LoadPresetButton_Click(object sender, RoutedEventArgs e)
+        {
+            var messageDialog = new MessageDialog("You have no presets available to load");
+            await messageDialog.ShowAsync();
         }
     }
 }
