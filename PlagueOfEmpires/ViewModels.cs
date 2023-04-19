@@ -6,7 +6,5 @@ using System.Threading.Tasks;
 
 namespace PlagueOfEmpires
 {
-    internal class ViewModels
-    {
-    }
+    
 }
