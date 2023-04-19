@@ -22,37 +22,48 @@ namespace PlagueOfEmpires
     /// </summary>
     public sealed partial class OptionsGraphics : Page
     {
+        bool goBackToMainMenu = false;
         public OptionsGraphics()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e?.Parameter is bool a)
+            {
+                goBackToMainMenu = a;
+            }
+            base.OnNavigatedTo(e);
         }
 
         private void BackButton_OnClick(object sender, RoutedEventArgs e)
         {
             if (Frame.CanGoBack)
             {
-                Frame.GoBack();
+                if (goBackToMainMenu) Frame.Navigate(typeof(MainPage));
+                else Frame.Navigate(typeof(PauseMenu));
             }
         }
 
         private void ButtonMusic_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OptionsMenu));
+            Frame.Navigate(typeof(OptionsMenu), goBackToMainMenu);
         }
 
         private void ButtonLanguaje_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OptionsLanguaje));
+            Frame.Navigate(typeof(OptionsLanguaje), goBackToMainMenu);
         }
 
         private void ButtonControls_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OptionsControls));
+            Frame.Navigate(typeof(OptionsControls), goBackToMainMenu);
         }
 
         private void ButtonAccount_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OptionsAccount));
+            Frame.Navigate(typeof(OptionsAccount), goBackToMainMenu);
         }
     }
 }
