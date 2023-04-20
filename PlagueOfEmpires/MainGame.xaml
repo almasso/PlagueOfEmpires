@@ -173,9 +173,9 @@
                     IsItemClickEnabled="True"
                     ItemClick="ImageGridView_ItemClick"
                     CanDragItems="True"
-                    IsFocusEngagementEnabled="True">
-                    <!--DragItemsStarting="ImageGridView_DragItemsStarting"-->
-                    
+                    IsFocusEngagementEnabled="True"
+                    DragItemsStarting="GridView_DragItemsStarting">
+
                     <GridView.ItemTemplate>
                         <DataTemplate x:DataType="local:VMStructure">
                             <Grid Background="White">
@@ -417,9 +417,12 @@
                 </ItemsPanelTemplate>
             </GridView.ItemsPanel>
             <GridView.ItemTemplate>
-                <DataTemplate>
-                    <Viewbox Width="50" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <Rectangle Stroke="#FFE61F0B" StrokeThickness="4" Width="100" Height="100"/>
+                <DataTemplate x:DataType="local:VMStructure">
+                    <Viewbox Width="50" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AllowDrop="True" Drop="MiGridView_Drop" DragOver="MiGridView_DragOver">
+                        <Grid>
+                            <Image x:Name="TableroTemplateImg" Source="{x:Bind Imagen}"/>
+                            <Rectangle Stroke="#FFE61F0B" StrokeThickness="4" Width="100" Height="100"/>
+                        </Grid>
                     </Viewbox>
                 </DataTemplate>
             </GridView.ItemTemplate>

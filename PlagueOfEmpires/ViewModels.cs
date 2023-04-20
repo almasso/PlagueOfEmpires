@@ -58,7 +58,7 @@ namespace PlagueOfEmpires
     {
         public VMStructure(int id) {
             Id = id;
-            Imagen = null;
+            Imagen = "./Assets/transparente.png";
         }
         public VMStructure(Structure structure)
         {

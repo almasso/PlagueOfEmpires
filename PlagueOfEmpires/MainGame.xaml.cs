@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -73,6 +74,28 @@ namespace PlagueOfEmpires
         private void ImageGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
             VMStructure item = e.ClickedItem as VMStructure;
+        }
+
+        private async void MiGridView_Drop(object sender, DragEventArgs e)
+        {
+            var id = await e.DataView.GetTextAsync();
+            VMStructure tmp = ListaEstructuras.ElementAt(Int32.Parse(id)) as VMStructure;
+            Viewbox vb = e.OriginalSource as Viewbox;
+            Grid gr = vb.Child as Grid;
+            Image img = gr.Children[0] as Image;
+            img.Source = new BitmapImage(new Uri("ms-appx:///" + tmp.Imagen));
+        }
+
+        private void GridView_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
+        {
+            VMStructure item = e.Items[0] as VMStructure;
+            e.Data.SetText(item.Id.ToString());
+            e.Data.RequestedOperation = Windows.ApplicationModel.DataTransfer.DataPackageOperation.Move;
+        }
+
+        private void MiGridView_DragOver(object sender, DragEventArgs e)
+        {
+            e.AcceptedOperation = Windows.ApplicationModel.DataTransfer.DataPackageOperation.Move;
         }
     }
 }
