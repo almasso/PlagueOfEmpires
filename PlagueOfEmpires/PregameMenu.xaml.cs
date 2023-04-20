@@ -40,12 +40,12 @@ namespace PlagueOfEmpires
             }
         }
 
-        //private void PlayButton_OnClick(object sender, RoutedEventArgs e)
-        //{
-        //    string[] a = new string[3];
-        //    if(A.IsChecked == true) a[1] = 
-        //    Frame.Navigate(typeof(MainGame));
-        //}
+        private void PlayButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            //string[] a = new string[3];
+            //if (A.IsChecked == true) a[1] =
+            Frame.Navigate(typeof(MainGame));
+        }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
