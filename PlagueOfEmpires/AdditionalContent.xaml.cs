@@ -87,6 +87,11 @@ namespace PlagueOfEmpires
             el.Stroke = VMMod.GetSolidColorBrush("#FF243e16");
             SymbolIcon sym = gridPrincipal.Children[2] as SymbolIcon;
             sym.Symbol = Symbol.Accept;
+
+            var item = b.DataContext;
+            int index = MiListView.Items.IndexOf(item);
+            Mod m = ModModel.GetModById(index);
+            m.Activado = true;
         }
 
         private void Deactivate(object sender, RoutedEventArgs e)
@@ -102,6 +107,11 @@ namespace PlagueOfEmpires
             el.Stroke = VMMod.GetSolidColorBrush("#FF5e0202");
             SymbolIcon sym = gridPrincipal.Children[2] as SymbolIcon;
             sym.Symbol = Symbol.Cancel;
+
+            var item = b.DataContext;
+            int index = MiListView.Items.IndexOf(item);
+            Mod m = ModModel.GetModById(index);
+            m.Activado = false;
         }
     }
 }
