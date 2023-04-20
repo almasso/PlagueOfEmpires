@@ -63,5 +63,10 @@ namespace PlagueOfEmpires
         {
 
         }
+
+        private void ImageGridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            VMStructure item = e.ClickedItem as VMStructure;
+        }
     }
 }

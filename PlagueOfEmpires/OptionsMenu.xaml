@@ -40,7 +40,7 @@
                 
             </Border>
 
-                <Frame Loaded/>
+                <Frame/>
 
             </StackPanel>
         </Viewbox>

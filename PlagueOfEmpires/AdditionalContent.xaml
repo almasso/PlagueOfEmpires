@@ -28,7 +28,7 @@
                         <TextBlock Text="{x:Bind Descripcion}" FontFamily="{StaticResource Aboreto}" FontSize="14" Foreground="White" TextWrapping="WrapWholeWords" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <Line Stroke="Black" StrokeThickness="3" X1="0" Y1="10" X2="700" Y2="10" Margin="0,0,0,2"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <Button Content="Activate" FontFamily="{StaticResource Aboreto}" Foreground="White" Margin="0,0,30,0" Background="#4c7a34" BorderBrush="#243e16" BorderThickness="5" CornerRadius="15" IsEnabled="{x:Bind Desactivado, Mode=TwoWay}" Click="Activate">
+                            <Button Content="Activate" IsTabStop="True" FontFamily="{StaticResource Aboreto}" Foreground="White" Margin="0,0,30,0" Background="#4c7a34" BorderBrush="#243e16" BorderThickness="5" CornerRadius="15" IsEnabled="{x:Bind Desactivado, Mode=TwoWay}" Click="Activate">
                                 <Button.Resources>
                                     <ResourceDictionary>
                                         <ResourceDictionary.ThemeDictionaries>
@@ -58,7 +58,7 @@
                                     </ResourceDictionary>
                                 </Button.Resources>
                             </Button>
-                            <Button Content="Deactivate" FontFamily="{StaticResource Aboreto}" Foreground="White" Margin="30,0,0,0" Background="#af3a11" BorderBrush="#5e0202" BorderThickness="5" CornerRadius="15" IsEnabled="{x:Bind Activado, Mode=TwoWay}" Click="Deactivate">
+                            <Button Content="Deactivate" IsTabStop="True" FontFamily="{StaticResource Aboreto}" Foreground="White" Margin="30,0,0,0" Background="#af3a11" BorderBrush="#5e0202" BorderThickness="5" CornerRadius="15" IsEnabled="{x:Bind Activado, Mode=TwoWay}" Click="Deactivate">
                                 <Button.Resources>
                                     <ResourceDictionary>
                                         <ResourceDictionary.ThemeDictionaries>
@@ -149,7 +149,7 @@
                 </Canvas>
             </StackPanel>
         </Viewbox>
-        <ListView x:Name="MiListView" Grid.Row="1" Grid.Column="1" ItemTemplate="{StaticResource DLC_Content}" ItemsSource="{x:Bind ListaMods}" SelectionMode="None" IsItemClickEnabled="False" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,100,0,100"/>
+        <ListView x:Name="MiListView" Grid.Row="1" Grid.Column="1" ItemTemplate="{StaticResource DLC_Content}" ItemsSource="{x:Bind ListaMods}" SelectionMode="None" IsItemClickEnabled="False" IsTabStop="True" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,100,0,100"/>
 
     </Grid>
 </Page>
