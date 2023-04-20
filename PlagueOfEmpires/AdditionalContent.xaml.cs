@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -14,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Shapes;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,9 +24,9 @@ namespace PlagueOfEmpires
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AdditionalContent : Page
+    public sealed partial class AdditionalContent : Page, INotifyPropertyChanged
     {
-
+        public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<VMMod> ListaMods { get; } = new ObservableCollection<VMMod>();
 
         public AdditionalContent()
@@ -70,6 +72,36 @@ namespace PlagueOfEmpires
                 }
 
             }
+        }
+
+        private void Activate(object sender, RoutedEventArgs e)
+        {
+            Button b = sender as Button;
+            b.SetValue(IsEnabledProperty, false);
+            var tmp = b.Parent as StackPanel;
+            Button but2 = tmp.Children[1] as Button;
+            but2.SetValue(IsEnabledProperty, true);
+            var gridPrincipal = ((tmp.Parent as StackPanel).Parent as Grid).Parent as Grid;
+            Ellipse el = gridPrincipal.Children[1] as Ellipse;
+            el.Fill = VMMod.GetSolidColorBrush("#FF92d36e");
+            el.Stroke = VMMod.GetSolidColorBrush("#FF243e16");
+            SymbolIcon sym = gridPrincipal.Children[2] as SymbolIcon;
+            sym.Symbol = Symbol.Accept;
+        }
+
+        private void Deactivate(object sender, RoutedEventArgs e)
+        {
+            Button b = sender as Button;
+            b.SetValue(IsEnabledProperty, false);
+            var tmp = b.Parent as StackPanel;
+            Button but2 = tmp.Children[0] as Button;
+            but2.SetValue(IsEnabledProperty, true);
+            var gridPrincipal = ((tmp.Parent as StackPanel).Parent as Grid).Parent as Grid;
+            Ellipse el = gridPrincipal.Children[1] as Ellipse;
+            el.Fill = VMMod.GetSolidColorBrush("#FFff5d55");
+            el.Stroke = VMMod.GetSolidColorBrush("#FF5e0202");
+            SymbolIcon sym = gridPrincipal.Children[2] as SymbolIcon;
+            sym.Symbol = Symbol.Cancel;
         }
     }
 }

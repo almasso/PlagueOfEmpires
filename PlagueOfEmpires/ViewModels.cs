@@ -13,7 +13,7 @@ namespace PlagueOfEmpires
 {
     public class VMMod : Mod
     { 
-        public SolidColorBrush GetSolidColorBrush(string hex)
+        public static SolidColorBrush GetSolidColorBrush(string hex)
         {
             hex = hex.Replace("#", string.Empty);
             byte a = (byte)(Convert.ToUInt32(hex.Substring(0, 2), 16));
