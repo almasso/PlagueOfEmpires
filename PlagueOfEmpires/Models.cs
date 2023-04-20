@@ -33,6 +33,8 @@ namespace PlagueOfEmpires
                 Descripcion = "This expansion adds 6 new types of virus, along with some new core functionality for the game.",
                 Activado = false,
                 Imagen = "./Assets/virus_dlc_3.jpg",
+                Ancho = 110,
+                Alto = 110
             },
             new Mod()
             {
@@ -41,6 +43,8 @@ namespace PlagueOfEmpires
                 Descripcion = "Some text regarding this expansion",
                 Activado = false,
                 Imagen = "./Assets/virus_dlc_2.jpg",
+                Ancho = 110,
+                Alto = 110
             },
             new Mod()
             {
@@ -49,6 +53,8 @@ namespace PlagueOfEmpires
                 Descripcion = "Some text regarding this expansion",
                 Activado = false,
                 Imagen = "./Assets/virus_dlc_3.jpg",
+                Ancho = 110,
+                Alto = 110
             },
             new Mod()
             {
@@ -57,6 +63,8 @@ namespace PlagueOfEmpires
                 Descripcion = "Some text regarding this expansion",
                 Activado = false,
                 Imagen = "./Assets/virus_dlc_2.jpg",
+                Ancho = 110,
+                Alto = 110
             },
             new Mod()
             {
@@ -65,6 +73,8 @@ namespace PlagueOfEmpires
                 Descripcion = "Some text regarding this expansion",
                 Activado = false,
                 Imagen = "./Assets/virus_dlc_2.jpg",
+                Ancho = 110,
+                Alto = 110
             },
             new Mod()
             {
@@ -73,6 +83,8 @@ namespace PlagueOfEmpires
                 Descripcion = "Some text regarding this expansion",
                 Activado = false,
                 Imagen = "./Assets/virus_dlc_3.jpg",
+                Ancho = 110,
+                Alto = 110
             },
             new Mod()
             {
@@ -81,6 +93,8 @@ namespace PlagueOfEmpires
                 Descripcion = "Some text regarding this expansion",
                 Activado = false,
                 Imagen = "./Assets/virus_dlc_3.jpg",
+                Ancho = 110,
+                Alto = 110
             },
             new Mod()
             {
@@ -89,6 +103,8 @@ namespace PlagueOfEmpires
                 Descripcion = "Some text regarding this expansion",
                 Activado = false,
                 Imagen = "./Assets/virus_dlc_2.jpg",
+                Ancho = 110,
+                Alto = 110
             },
             new Mod()
             {
@@ -97,6 +113,8 @@ namespace PlagueOfEmpires
                 Descripcion = "Some text regarding this expansion",
                 Activado = false,
                 Imagen = "./Assets/virus_dlc_3.jpg",
+                Ancho = 110,
+                Alto = 110
             },
         };
 
