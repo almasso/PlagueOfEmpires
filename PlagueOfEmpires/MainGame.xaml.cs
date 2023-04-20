@@ -24,9 +24,9 @@ namespace PlagueOfEmpires
     /// </summary>
     public sealed partial class MainGame : Page
     {
-        string Enemy1 = "./Assets/Virus1.png";
-        string Enemy2 = "./Assets/Virus2.png";
-        string Player = "./Assets/Virus3.png";
+        string Enemy1 = "./Assets/virusA-Morado.png";
+        string Enemy2 = "./Assets/virusB-Rojo.png";
+        string Player = "./Assets/virusC-Azul.png";
 
         public ObservableCollection<VMStructure> ListaEstructuras { get; } = new ObservableCollection<VMStructure>();
 

@@ -40,12 +40,26 @@ namespace PlagueOfEmpires
             }
         }
 
-        //private void PlayButton_OnClick(object sender, RoutedEventArgs e)
-        //{
-        //    string[] a = new string[3];
-        //    if(A.IsChecked == true) a[1] = 
-        //    Frame.Navigate(typeof(MainGame));
-        //}
+        private void PlayButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            string[] a = new string[3];
+            if (Enemy1A.IsSelected == true) a[0] = "./Assets/virusA-Morado.png";
+            else if (Enemy1B.IsSelected == true) a[0] = "./Assets/virusB-Morado.png";
+            else if (Enemy1C.IsSelected == true) a[0] = "./Assets/virusC-Morado.png";
+            else if (Enemy1D.IsSelected == true) a[0] = "./Assets/virusD-Morado.png";
+
+            if (A.IsChecked == true) a[1] = "./Assets/virusA-Rojo.png";
+            else if (B.IsChecked == true) a[1] = "./Assets/virusB-Rojo.png";
+            else if (C.IsChecked == true) a[1] = "./Assets/virusC-Rojo.png";
+            else if (D.IsChecked == true) a[1] = "./Assets/virusD-Rojo.png";
+
+            if (Enemy2A.IsSelected == true) a[2] = "./Assets/virusA-Azul.png";
+            else if (Enemy2B.IsSelected == true) a[2] = "./Assets/virusB-Azul.png";
+            else if (Enemy2C.IsSelected == true) a[2] = "./Assets/virusC-Azul.png";
+            else if (Enemy2D.IsSelected == true) a[2] = "./Assets/virusD-Azul.png";
+
+            Frame.Navigate(typeof(MainGame), a);
+        }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {

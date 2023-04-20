@@ -43,7 +43,7 @@
         </Viewbox>
 
         <Viewbox Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Top">
-            <Grid BorderBrush="#8b0707" BorderThickness="2">
+            <Grid BorderBrush="#8b0707" BorderThickness="2" HorizontalAlignment="Stretch">
                 <Grid.Background>
                     <media:RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
                         <GradientStop Color="#f70000" Offset="0"/>

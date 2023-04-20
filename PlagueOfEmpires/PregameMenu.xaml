@@ -84,16 +84,16 @@
                             <TextBlock Text="CUSTOMIZE ENEMIES" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
 
                             <ComboBox Header="Enemy1" Background="White" Foreground="Red" Margin="0" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
-                                <ComboBoxItem Content="Virus Type A"/>
-                                <ComboBoxItem Content="Virus Type B" IsSelected="True"/>
-                                <ComboBoxItem Content="Virus Type C"/>
-                                <ComboBoxItem Content="Virus Type D"/>
+                                <ComboBoxItem x:Name="Enemy1A" Content="Virus Type A"/>
+                                <ComboBoxItem x:Name="Enemy1B" Content="Virus Type B" IsSelected="True"/>
+                                <ComboBoxItem x:Name="Enemy1C" Content="Virus Type C"/>
+                                <ComboBoxItem x:Name="Enemy1D" Content="Virus Type D"/>
                             </ComboBox>
                             <ComboBox Header="Enemy2" Background="White" Foreground="Red" Margin="10 30 10 10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
-                                <ComboBoxItem Content="Virus Type A"/>
-                                <ComboBoxItem Content="Virus Type B"/>
-                                <ComboBoxItem Content="Virus Type C" IsSelected="True"/>
-                                <ComboBoxItem Content="Virus Type D"/>
+                                <ComboBoxItem x:Name="Enemy2A" Content="Virus Type A"/>
+                                <ComboBoxItem x:Name="Enemy2B" Content="Virus Type B"/>
+                                <ComboBoxItem x:Name="Enemy2C" Content="Virus Type C" IsSelected="True"/>
+                                <ComboBoxItem x:Name="Enemy2D" Content="Virus Type D"/>
                             </ComboBox>
                         </StackPanel>
 
