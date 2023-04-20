@@ -169,13 +169,20 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\banco.jpg" />
+    <Content Include="Assets\biblioteca.jpg" />
     <Content Include="Assets\body.png" />
     <Content Include="Assets\brightnessIcon.png" />
+    <Content Include="Assets\catedral.jpg" />
     <Content Include="Assets\controls.png" />
+    <Content Include="Assets\estadio.jpg" />
+    <Content Include="Assets\fabrica.jpg" />
     <Content Include="Assets\Fondo.png" />
     <Content Include="Assets\FondoTablero.jpg" />
     <Content Include="Assets\mano.png" />
     <Content Include="Assets\mapa.png" />
+    <Content Include="Assets\muro.jpg" />
+    <Content Include="Assets\taller.jpg" />
     <Content Include="Assets\Virus1.png" />
     <Content Include="Assets\Virus2.png" />
     <Content Include="Assets\Virus3.png" />

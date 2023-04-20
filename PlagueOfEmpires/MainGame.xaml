@@ -143,13 +143,13 @@
             <Viewbox Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <StackPanel Orientation="Vertical">
                     <Button Content="Structure type 1" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
-                    <Button Content="Structure type 2" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
-                    <Button Content="Structure type 3" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
-                    <Button Content="Structure type 4" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
-                    <Button Content="Structure type 5" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
-                    <Button Content="Structure type 6" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
-                    <Button Content="Structure type 7" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
-                    </StackPanel>
+                    <Button Content="Structure type 2" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
+                    <Button Content="Structure type 3" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
+                    <Button Content="Structure type 4" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
+                    <Button Content="Structure type 5" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
+                    <Button Content="Structure type 6" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
+                    <Button Content="Structure type 7" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
+                </StackPanel>
             </Viewbox>
             <Grid Grid.Row="1" Grid.Column="1" BorderBrush="#8b0707" BorderThickness="3" HorizontalAlignment="Stretch">
                 <Grid.Background>
@@ -158,17 +158,17 @@
                         <GradientStop Color="#FF05586F" Offset="1"/>
                     </media:RadialGradientBrush>
                 </Grid.Background>
-                <GridView ItemsSource="12345ABCDE12345ABCDE12345ABCD" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20">
+                <GridView ItemsSource="{x:Bind ListaEstructuras}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20">
                     <GridView.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate x:DataType="local:VMStructure">
                             <Grid Background="White">
-                                <Image Source="Assets/StoreLogo.png" Width="40" Height="40"/>
+                                <Image Source="{x:Bind Imagen}" Width="40" Height="40"/>
                             </Grid>
                         </DataTemplate>
                     </GridView.ItemTemplate>
                     <GridView.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <ItemsWrapGrid MaximumRowsOrColumns="5" Orientation="Horizontal"/>
+                            <ItemsWrapGrid MaximumRowsOrColumns="4" Orientation="Horizontal"/>
                         </ItemsPanelTemplate>
                     </GridView.ItemsPanel>
                 </GridView>

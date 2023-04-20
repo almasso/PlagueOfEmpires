@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,9 +23,23 @@ namespace PlagueOfEmpires
     /// </summary>
     public sealed partial class MainGame : Page
     {
+        public ObservableCollection<VMStructure> ListaEstructuras { get; } = new ObservableCollection<VMStructure>();
         public MainGame()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (ListaEstructuras != null)
+            {
+                foreach (Structure m in StructureModel.GetAllStructures())
+                {
+                    VMStructure tmp = new VMStructure(m);
+                    ListaEstructuras.Add(tmp);
+                }
+            }
+            base.OnNavigatedTo(e);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
