@@ -29,6 +29,7 @@ namespace PlagueOfEmpires
         string Player = "./Assets/virusC-Azul.png";
 
         public ObservableCollection<VMStructure> ListaEstructuras { get; } = new ObservableCollection<VMStructure>();
+        public ObservableCollection<VMStructure> EstructurasTablero { get; set; } = new ObservableCollection<VMStructure>();
 
         public MainGame()
         {
@@ -49,6 +50,11 @@ namespace PlagueOfEmpires
                 {
                     VMStructure tmp = new VMStructure(m);
                     ListaEstructuras.Add(tmp);
+                }
+
+                for(int i = 0; i < 72; i++) {
+                    VMStructure tmp = new VMStructure(i);
+                    EstructurasTablero.Add(tmp);
                 }
             }
             base.OnNavigatedTo(e);

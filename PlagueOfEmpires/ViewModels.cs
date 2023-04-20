@@ -56,6 +56,10 @@ namespace PlagueOfEmpires
 
     public class VMStructure : Structure
     {
+        public VMStructure(int id) {
+            Id = id;
+            Imagen = null;
+        }
         public VMStructure(Structure structure)
         {
             Id = structure.Id;
