@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -17,11 +18,13 @@ using Windows.UI.Xaml.Navigation;
 
 namespace PlagueOfEmpires
 {
-    /// <summary>
-    /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
-    /// </summary>
-    public sealed partial class OptionsAccount : Page
+    public sealed partial class OptionsAccount : Page, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        string SignUpButton = "SIGN UP";
+        string SignInButton = "SIGN IN";
+        string SignInText = "SIGN IN";
+        string AccountText = "DON'T HAVE AN ACCOUNT?";
         bool goBackToMainMenu = false;
         public OptionsAccount()
         {
@@ -68,7 +71,33 @@ namespace PlagueOfEmpires
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
+            if(SignUpButtonName.Content.ToString() == "SIGN UP")
+            {
+                SignUpButton = "SIGN IN";
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SignUpButton)));
+                SignInButton = "SIGN UP";
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SignInButton)));
+                SignInText = "SIGN UP";
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SignInText)));
+                AccountText = "ALREADY HAVE AN ACCOUNT?";
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(AccountText)));
+            }
+            else
+            {
+                SignUpButton = "SIGN UP";
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SignUpButton)));
+                SignInButton = "SIGN IN";
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SignInButton)));
+                SignInText = "SIGN IN";
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SignInText)));
+                AccountText = "DON'T HAVE AN ACCOUNT?";
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(AccountText)));
+            }
+        }
 
+        private void ButtonCredits_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(OptionsCredits), goBackToMainMenu);
         }
     }
 }

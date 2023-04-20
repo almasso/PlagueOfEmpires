@@ -65,5 +65,10 @@ namespace PlagueOfEmpires
         {
             Frame.Navigate(typeof(OptionsAccount), goBackToMainMenu);
         }
+
+        private void ButtonCredits_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(OptionsCredits), goBackToMainMenu);
+        }
     }
 }

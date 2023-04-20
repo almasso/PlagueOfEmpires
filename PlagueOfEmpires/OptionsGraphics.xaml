@@ -29,8 +29,7 @@
                         <Button Content="LANGUAGE" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonLanguaje_Click"/>
                         <Button Content="CONTROLS" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonControls_Click" />
                         <Button Content="ACCOUNT" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonAccount_Click" />
-                        <Button Content="ACHIEVEMENTS" Style="{StaticResource MenuButton}" Width="170" Margin="10 200 10 10" />
-                        <Button Content="CREDITS" Width="170" Height="45" Style="{StaticResource MenuButton}"/>
+                        <Button Content="CREDITS" Width="170" Height="45" Style="{StaticResource MenuButton}" Margin="10 250 10 10" Click="ButtonCredits_Click" />
                         <Button Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="BackButton_OnClick" >
                             <Viewbox MaxHeight="30" MaxWidth="30">
                                 <SymbolIcon Symbol="Back" Height="13"/>
@@ -72,7 +71,7 @@
                                 </Viewbox>
                                 <ComboBox Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
                                     <ComboBoxItem Content="LOW"/>
-                                    <ComboBoxItem Content="MEDIUM"/>
+                                    <ComboBoxItem Content="MEDIUM" IsSelected="True"/>
                                     <ComboBoxItem Content="HIGH"/>
                                 </ComboBox>
                             </StackPanel>
@@ -82,8 +81,8 @@
                                 <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
                                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE706;"  Height="20"/>
                                 </Viewbox>
-                                <Slider Width="400" Foreground="Red"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10" Value="50"/>
-                                <TextBlock Text="50%" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10"/>
+                                <Slider Width="400" Foreground="Red"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10" Value="50" ValueChanged="BrightnessSlider_ValueChanged"/>
+                                <TextBlock Text="{x:Bind BrightnessValue, Mode=TwoWay}" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="120 50 0 0">
@@ -101,7 +100,7 @@
                                 </Viewbox>
                                 <ComboBox Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
                                     <ComboBoxItem Content="WINDOWED"/>
-                                    <ComboBoxItem Content="FULLSCREEN"/>
+                                    <ComboBoxItem Content="FULLSCREEN" IsSelected="True"/>
                                 </ComboBox>
                             </StackPanel>
                         </StackPanel>

@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="PlagueOfEmpires.OptionsLanguaje"
+    x:Class="PlagueOfEmpires.OptionsCredits"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:PlagueOfEmpires"
@@ -26,10 +26,10 @@
                     <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <Button Content="MUSIC AND SOUNDS" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Margin="10 100 10 10" Click="ButtonMusic_Click"/>
                         <Button Content="GRAPHICS" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonGraphics_Click"/>
-                        <Button Content="LANGUAGE" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top"/>
+                        <Button Content="LANGUAGE" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonLanguaje_Click"/>
                         <Button Content="CONTROLS" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonControls_Click" />
                         <Button Content="ACCOUNT" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonAccount_Click" />
-                        <Button Content="CREDITS" Width="170" Height="45" Style="{StaticResource MenuButton}" Margin="10 250 10 10" Click="ButtonCredits_Click" />
+                        <Button Content="CREDITS" Width="170" Height="45" Style="{StaticResource MenuButton}" Margin="10 250 10 10"/>
                         <Button Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="BackButton_OnClick" >
                             <Viewbox MaxHeight="30" MaxWidth="30">
                                 <SymbolIcon Symbol="Back" Height="13"/>
@@ -50,7 +50,7 @@
                                 </media:RadialGradientBrush.GradientStops>
                             </media:RadialGradientBrush>
                         </Border.Background>
-                        <TextBlock Text="LANGUAJE" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
+                        <TextBlock Text="CREDITS" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
                     </Border>
 
                     <Border HorizontalAlignment="Stretch" Height="700">
@@ -64,16 +64,10 @@
                         </Border.Background>
 
                         <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                            <TextBlock Text="DISPLAY LANGUAJE" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
-                                <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
-                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8C1;"  Height="20"/>
-                                </Viewbox>
-                                <ComboBox Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
-                                    <ComboBoxItem Content="ENGLISH" IsSelected="True"/>
-                                    <ComboBoxItem Content="SPANISH"/>
-                                </ComboBox>
-                            </StackPanel>
+                            <TextBlock Text="LEAD  PROGRAMMERS,  ART  DIRECTORS  AND  UI  DESIGNERS :" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
+                            <TextBlock Text="ALEJANDRO MASSÓ MARTÍNEZ" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
+                            <TextBlock Text="ANDREA  VEGA  SAUGAR" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 20 10 10"/>
+
                         </StackPanel>
 
                     </Border>
