@@ -25,7 +25,7 @@
                 </Border.Background>
 
                 <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Button Content="MUSIC AND SOUNDS" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Margin="10 100 10 10"/>
+                    <Button Content="MUSIC AND SOUNDS" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Margin="10 100 10 10" Click="ButtonMusic_Click"/>
                     <Button Content="GRAPHICS" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonGraphics_Click"/>
                         <Button Content="LANGUAGE" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonLanguaje_Click"/>
                         <Button Content="CONTROLS" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonControls_Click" />
@@ -40,7 +40,7 @@
                 
             </Border>
 
-                <Frame/>
+                <Frame x:Name="FrameSecundario"/>
 
             </StackPanel>
         </Viewbox>
