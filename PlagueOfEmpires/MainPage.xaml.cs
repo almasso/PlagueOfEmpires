@@ -50,7 +50,7 @@ namespace PlagueOfEmpires
         {
             // The Page.Frame property is a reference to the Frame that's displaying the page.
             // Use Frame.Navigate to go to the next page.
-            Frame.Navigate(typeof(OptionsMenu), true);
+            Frame.Navigate(typeof(OptionsMenu));
         }
 
         public void ActualizaIU() { }

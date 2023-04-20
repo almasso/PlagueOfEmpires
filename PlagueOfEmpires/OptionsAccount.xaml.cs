@@ -25,48 +25,9 @@ namespace PlagueOfEmpires
         string SignInButton = "SIGN IN";
         string SignInText = "SIGN IN";
         string AccountText = "DON'T HAVE AN ACCOUNT?";
-        bool goBackToMainMenu = false;
         public OptionsAccount()
         {
             this.InitializeComponent();
-        }
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            if (e?.Parameter is bool a)
-            {
-                goBackToMainMenu = a;
-            }
-            base.OnNavigatedTo(e);
-        }
-
-        private void ButtonMusic_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(OptionsMenu), goBackToMainMenu);
-        }
-
-        private void ButtonGraphics_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(OptionsGraphics), goBackToMainMenu);
-        }
-
-        private void ButtonLanguaje_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(OptionsLanguaje), goBackToMainMenu);
-        }
-
-        private void ButtonControls_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(OptionsControls), goBackToMainMenu);
-        }
-
-        private void BackButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            if (Frame.CanGoBack)
-            {
-                if (goBackToMainMenu) Frame.Navigate(typeof(MainPage));
-                else Frame.Navigate(typeof(PauseMenu));
-            }
         }
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
@@ -93,11 +54,6 @@ namespace PlagueOfEmpires
                 AccountText = "DON'T HAVE AN ACCOUNT?";
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(AccountText)));
             }
-        }
-
-        private void ButtonCredits_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(OptionsCredits), goBackToMainMenu);
         }
     }
 }

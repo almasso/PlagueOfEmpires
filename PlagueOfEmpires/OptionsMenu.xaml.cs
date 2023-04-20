@@ -40,15 +40,6 @@ namespace PlagueOfEmpires
             FrameSecundario.SourcePageType = typeof(OptionsMusic);
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            if(e?.Parameter is bool a)
-            {
-                goBackToMainMenu = a;
-            }
-            base.OnNavigatedTo(e);
-        }
-
         private void BackButton_OnClick(object sender, RoutedEventArgs e)
         {
             if (Frame.CanGoBack)
@@ -60,21 +51,61 @@ namespace PlagueOfEmpires
         private void ButtonGraphics_Click(object sender, RoutedEventArgs e)
         {
             FrameSecundario.SourcePageType = typeof(OptionsGraphics);
+
+
+            Button but = sender as Button;
+            StackPanel sp = but.Parent as StackPanel;
+            foreach (var b in sp.Children)
+            {
+                Button tmp = b as Button;
+                b.SetValue(IsEnabledProperty, true);
+            }
+            but.SetValue(IsEnabledProperty, false);
         }
 
         private void ButtonLanguaje_Click(object sender, RoutedEventArgs e)
         {
             FrameSecundario.SourcePageType = typeof(OptionsLanguaje);
+
+
+            Button but = sender as Button;
+            StackPanel sp = but.Parent as StackPanel;
+            foreach (var b in sp.Children)
+            {
+                Button tmp = b as Button;
+                b.SetValue(IsEnabledProperty, true);
+            }
+            but.SetValue(IsEnabledProperty, false);
         }
 
         private void ButtonControls_Click(object sender, RoutedEventArgs e)
         {
             FrameSecundario.SourcePageType = typeof(OptionsControls);
+
+
+            Button but = sender as Button;
+            StackPanel sp = but.Parent as StackPanel;
+            foreach (var b in sp.Children)
+            {
+                Button tmp = b as Button;
+                b.SetValue(IsEnabledProperty, true);
+            }
+            but.SetValue(IsEnabledProperty, false);
         }
 
         private void ButtonAccount_Click(object sender, RoutedEventArgs e)
         {
             FrameSecundario.SourcePageType = typeof(OptionsAccount);
+
+
+            Button but = sender as Button;
+            StackPanel sp = but.Parent as StackPanel;
+            foreach (var b in sp.Children)
+            {
+                Button tmp = b as Button;
+                b.SetValue(IsEnabledProperty, true);
+            }
+            but.SetValue(IsEnabledProperty, false);
         }
 
         private void VolumeSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
@@ -120,6 +151,16 @@ namespace PlagueOfEmpires
         private void ButtonCredits_Click(object sender, RoutedEventArgs e)
         {
             FrameSecundario.SourcePageType = typeof(OptionsCredits);
+
+
+            Button but = sender as Button;
+            StackPanel sp = but.Parent as StackPanel;
+            foreach (var b in sp.Children)
+            {
+                Button tmp = b as Button;
+                b.SetValue(IsEnabledProperty, true);
+            }
+            but.SetValue(IsEnabledProperty, false);
         }
 
         private void ButtonMusic_Click(object sender, RoutedEventArgs e)
