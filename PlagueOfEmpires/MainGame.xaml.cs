@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Numerics;
@@ -26,6 +27,9 @@ namespace PlagueOfEmpires
         string Enemy1 = "./Assets/Virus1.png";
         string Enemy2 = "./Assets/Virus2.png";
         string Player = "./Assets/Virus3.png";
+
+        public ObservableCollection<VMStructure> ListaEstructuras { get; } = new ObservableCollection<VMStructure>();
+
         public MainGame()
         {
             this.InitializeComponent();
@@ -36,8 +40,16 @@ namespace PlagueOfEmpires
             if (e?.Parameter is string[] a)
             {
                 Enemy1 = a[0];
-                Player= a[1];
+                Player = a[1];
                 Enemy2 = a[2];
+            }
+            if (ListaEstructuras != null)
+            {
+                foreach (Structure m in StructureModel.GetAllStructures())
+                {
+                    VMStructure tmp = new VMStructure(m);
+                    ListaEstructuras.Add(tmp);
+                }
             }
             base.OnNavigatedTo(e);
         }

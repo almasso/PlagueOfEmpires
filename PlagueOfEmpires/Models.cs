@@ -128,4 +128,110 @@ namespace PlagueOfEmpires
             return Mods[id];
         }
     }
+
+    public class Structure
+    {
+        public int Id { get; set; }
+
+        public string Imagen { get; set; }
+
+        public Structure() { }
+    }
+
+    public class StructureModel
+    {
+        public static List<Structure> Structures = new List<Structure>()
+        {
+            new Structure()
+            {
+                Id = 0,
+                Imagen = "./Assets/biblioteca.jpg"
+            },
+            new Structure()
+            {
+                Id = 1,
+                Imagen = "./Assets/muro.jpg"
+            },
+            new Structure()
+            {
+                Id = 2,
+                Imagen = "./Assets/taller.jpg"
+            },
+            new Structure()
+            {
+                Id = 3,
+                Imagen = "./Assets/catedral.jpg"
+            },
+            new Structure()
+            {
+                Id = 4,
+                Imagen = "./Assets/banco.jpg"
+            },
+            new Structure()
+            {
+                Id = 5,
+                Imagen = "./Assets/fabrica.jpg"
+            },
+            new Structure()
+            {
+                Id = 6,
+                Imagen = "./Assets/estadio.jpg"
+            },
+            new Structure()
+            {
+                Id = 7,
+                Imagen = "./Assets/biblioteca.jpg"
+            },
+            new Structure()
+            {
+                Id = 8,
+                Imagen = "./Assets/muro.jpg"
+            },
+            new Structure()
+            {
+                Id = 9,
+                Imagen = "./Assets/taller.jpg"
+            },
+            new Structure()
+            {
+                Id = 10,
+                Imagen = "./Assets/catedral.jpg"
+            },
+            new Structure()
+            {
+                Id = 11,
+                Imagen = "./Assets/banco.jpg"
+            },
+            new Structure()
+            {
+                Id = 12,
+                Imagen = "./Assets/fabrica.jpg"
+            },
+            new Structure()
+            {
+                Id = 13,
+                Imagen = "./Assets/estadio.jpg"
+            },
+            new Structure()
+            {
+                Id = 14,
+                Imagen = "./Assets/banco.jpg"
+            },
+            new Structure()
+            {
+                Id = 15,
+                Imagen = "./Assets/fabrica.jpg"
+            }
+        };
+        
+        public static IList<Structure> GetAllStructures()
+        {
+            return Structures;
+        }
+
+        public static Structure GetStructureById(int id)
+        {
+            return Structures[id];
+        }
+    }
 }

@@ -24,7 +24,6 @@ namespace PlagueOfEmpires
             return myBrush;
         }
 
-        public Image img;
         public bool Desactivado;
         public SolidColorBrush ellipseC;
         public SolidColorBrush ellipseStroke;
@@ -52,6 +51,15 @@ namespace PlagueOfEmpires
                 ellipseStroke = GetSolidColorBrush("#FF243e16");
                 s = Symbol.Accept;
             }
+        }
+    }
+
+    public class VMStructure : Structure
+    {
+        public VMStructure(Structure structure)
+        {
+            Id = structure.Id;
+            Imagen = structure.Imagen;
         }
     }
 }
