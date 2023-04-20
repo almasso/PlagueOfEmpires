@@ -118,7 +118,7 @@
                                 <TextBlock Text="RANDOM SPAWN POINT" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White"  FontWeight="ExtraBold" VerticalAlignment="Center" Margin="110 0 0 0"/>
                                 <CheckBox x:Name="RandomSpawn" Margin="20 0 0 0" Foreground="#8b0707" Checked="MapCheckBox_OnChecked" Unchecked="MapCheckBox_OnUnchecked"/>
                             </StackPanel>
-                            <ScrollViewer IsEnabled="{x:Bind isRandom, Mode=TwoWay}" x:Name="MyScroll" Grid.Row="1" ZoomMode="Enabled" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" Width="350" Height="250" Margin="20">
+                            <ScrollViewer IsTabStop="True" IsEnabled="{x:Bind isRandom, Mode=TwoWay}" x:Name="MyScroll" Grid.Row="1" ZoomMode="Enabled" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" Width="350" Height="250" Margin="20">
                                 <Image x:Name="myBody" Source="./Assets/body.png" Width="800" Height="800"/>
                             </ScrollViewer>
 

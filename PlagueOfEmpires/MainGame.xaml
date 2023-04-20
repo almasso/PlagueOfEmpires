@@ -161,6 +161,7 @@
                     <Button Content="Structure type 7" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
                 </StackPanel>
             </Viewbox>
+
             <Grid Grid.Row="1" Grid.Column="1" BorderBrush="#8b0707" BorderThickness="3" HorizontalAlignment="Stretch">
                 <Grid.Background>
                     <media:RadialGradientBrush Center="0.5,0.5" GradientOrigin="0.5,0.5" RadiusX="0.5" RadiusY="0.7">
@@ -168,7 +169,13 @@
                         <GradientStop Color="#FF05586F" Offset="1"/>
                     </media:RadialGradientBrush>
                 </Grid.Background>
-                <GridView ItemsSource="{x:Bind ListaEstructuras}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20">
+                <GridView ItemsSource="{x:Bind ListaEstructuras}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20" 
+                    IsItemClickEnabled="True"
+                    ItemClick="ImageGridView_ItemClick"
+                    CanDragItems="True"
+                    IsFocusEngagementEnabled="True">
+                    <!--DragItemsStarting="ImageGridView_DragItemsStarting"-->
+                    
                     <GridView.ItemTemplate>
                         <DataTemplate x:DataType="local:VMStructure">
                             <Grid Background="White">
@@ -403,7 +410,7 @@
             </GridView.ItemContainerStyle>
         </GridView>
 
-        <GridView Margin="0,0,0,0" ItemsSource="1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJKLMNOPQRSTUV" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+        <GridView x:Name="MiGridView" Margin="0,0,0,0" ItemsSource="1234567890ABCDEFGHIJ1234567890ABCDEFGHIJ1234567890ABCDEFGHIJKLMNOPQRSTUV" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden">
             <GridView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="10"/>
