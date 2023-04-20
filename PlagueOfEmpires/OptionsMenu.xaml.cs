@@ -37,6 +37,7 @@ namespace PlagueOfEmpires
         public OptionsMenu()
         {
             this.InitializeComponent();
+            FrameSecundario.SourcePageType = typeof(OptionsMusic);
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -52,29 +53,28 @@ namespace PlagueOfEmpires
         {
             if (Frame.CanGoBack)
             {
-                if (goBackToMainMenu) Frame.Navigate(typeof(MainPage));
-                else Frame.Navigate(typeof(PauseMenu));
+                Frame.GoBack();
             }
         }
 
         private void ButtonGraphics_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OptionsGraphics), goBackToMainMenu);
+            FrameSecundario.SourcePageType = typeof(OptionsGraphics);
         }
 
         private void ButtonLanguaje_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OptionsLanguaje), goBackToMainMenu);
+            FrameSecundario.SourcePageType = typeof(OptionsLanguaje);
         }
 
         private void ButtonControls_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OptionsControls), goBackToMainMenu);
+            FrameSecundario.SourcePageType = typeof(OptionsControls);
         }
 
         private void ButtonAccount_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OptionsAccount), goBackToMainMenu);
+            FrameSecundario.SourcePageType = typeof(OptionsAccount);
         }
 
         private void VolumeSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
@@ -119,7 +119,21 @@ namespace PlagueOfEmpires
 
         private void ButtonCredits_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OptionsCredits), goBackToMainMenu);
+            FrameSecundario.SourcePageType = typeof(OptionsCredits);
+        }
+
+        private void ButtonMusic_Click(object sender, RoutedEventArgs e)
+        {
+            FrameSecundario.SourcePageType = typeof(OptionsMusic);
+
+            Button but = sender as Button;
+            StackPanel sp = but.Parent as StackPanel;
+            foreach(var b in sp.Children)
+            {
+                Button tmp = b as Button;
+                b.SetValue(IsEnabledProperty, true);
+            }
+            but.SetValue(IsEnabledProperty, false);
         }
     }
 }
