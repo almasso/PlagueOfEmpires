@@ -12,7 +12,7 @@
 
     <Page.Resources>
         <ui:AttachedDropShadow x:Name="CommonShadow" Offset="0,10,0" Color="Gray" Opacity="1" CastTo="{x:Bind ShadowTarget}" IsMasked="True"/>
-        <DataTemplate x:Key="DLC_Content">
+        <DataTemplate x:Key="DLC_Content" x:DataType="local:VMMod">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -24,8 +24,8 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Expansion Pack" FontFamily="{StaticResource Aboreto}" FontSize="25" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock Text="Short description about the content of the pack, dlc or mod, with some details that it may contain" FontFamily="{StaticResource Aboreto}" FontSize="14" Foreground="White" TextWrapping="WrapWholeWords" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Text="{x:Bind Nombre}" FontFamily="{StaticResource Aboreto}" FontSize="25" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Text="{x:Bind Descripcion}" FontFamily="{StaticResource Aboreto}" FontSize="14" Foreground="White" TextWrapping="WrapWholeWords" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <Line Stroke="Black" StrokeThickness="3" X1="0" Y1="10" X2="700" Y2="10" Margin="0,0,0,2"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Button Content="Activate" FontFamily="{StaticResource Aboreto}" Foreground="White" Margin="0,0,30,0" Background="#4c7a34" BorderBrush="#243e16" BorderThickness="5" CornerRadius="15" IsEnabled="False">
@@ -90,7 +90,7 @@
                             </Button>
                         </StackPanel>
                     </StackPanel>
-                    <Image Grid.Column="1" Source="Assets/StoreLogo.png"/>
+                    <Image Grid.Column="1" Source="{x:Bind Imagen}"/>
                 </Grid>
 
                 <Ellipse Fill="#92d36e" Width="50" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,5,0,0" Stroke="#243e16" StrokeThickness="5"/>
@@ -149,7 +149,7 @@
                 </Canvas>
             </StackPanel>
         </Viewbox>
-        <ListView Grid.Row="1" Grid.Column="1" ItemTemplate="{StaticResource DLC_Content}" ItemsSource="123456789ABCD" SelectionMode="None" IsItemClickEnabled="False" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,100,0,100"/>
+        <ListView Grid.Row="1" Grid.Column="1" ItemTemplate="{StaticResource DLC_Content}" ItemsSource="{x:Bind ListaMods}" SelectionMode="None" IsItemClickEnabled="False" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,100,0,100"/>
 
     </Grid>
 </Page>

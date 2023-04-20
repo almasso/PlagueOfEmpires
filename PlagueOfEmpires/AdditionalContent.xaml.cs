@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -11,6 +12,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -22,9 +24,25 @@ namespace PlagueOfEmpires
     /// </summary>
     public sealed partial class AdditionalContent : Page
     {
+
+        public ObservableCollection<VMMod> ListaMods { get; } = new ObservableCollection<VMMod>();
+
         public AdditionalContent()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if(ListaMods != null)
+            {
+                foreach(Mod m in ModModel.GetAllMods())
+                {
+                    VMMod tmp = new VMMod(m);
+                    ListaMods.Add(tmp);
+                }
+            }
+            base.OnNavigatedTo(e);
         }
 
         private void ReturnWithEscape(object sender, KeyRoutedEventArgs e)

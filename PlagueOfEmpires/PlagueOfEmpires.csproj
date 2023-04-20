@@ -179,6 +179,9 @@
     <Content Include="Assets\virusB.png" />
     <Content Include="Assets\virusC.png" />
     <Content Include="Assets\virusD.png" />
+    <Content Include="Assets\virus_dlc_1.jpg" />
+    <Content Include="Assets\virus_dlc_2.jpg" />
+    <Content Include="Assets\virus_dlc_3.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
