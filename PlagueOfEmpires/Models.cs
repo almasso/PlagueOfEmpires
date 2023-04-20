@@ -15,6 +15,10 @@ namespace PlagueOfEmpires
         public bool Activado { get; set; }
         public string Imagen { get; set; }
 
+        public int Ancho { get; set; }
+
+        public int Alto { get; set; }
+
         public Mod() { }
     }
 

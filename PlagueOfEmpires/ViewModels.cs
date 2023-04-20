@@ -16,6 +16,7 @@ namespace PlagueOfEmpires
             Nombre = mod.Nombre;
             Descripcion = mod.Descripcion;
             Activado = mod.Activado;
+            Imagen = mod.Imagen;
         }
     }
 }
