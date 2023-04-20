@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -22,9 +23,23 @@ namespace PlagueOfEmpires
     /// </summary>
     public sealed partial class MainGame : Page
     {
+        string Enemy1 = "./Assets/Virus1.png";
+        string Enemy2 = "./Assets/Virus2.png";
+        string Player = "./Assets/Virus3.png";
         public MainGame()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e?.Parameter is string[] a)
+            {
+                Enemy1 = a[0];
+                Player= a[1];
+                Enemy2 = a[2];
+            }
+            base.OnNavigatedTo(e);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
