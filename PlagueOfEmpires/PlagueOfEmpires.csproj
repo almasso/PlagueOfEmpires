@@ -139,6 +139,9 @@
     <Compile Include="OptionsControls.xaml.cs">
       <DependentUpon>OptionsControls.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OptionsCredits.xaml.cs">
+      <DependentUpon>OptionsCredits.xaml</DependentUpon>
+    </Compile>
     <Compile Include="OptionsGraphics.xaml.cs">
       <DependentUpon>OptionsGraphics.xaml</DependentUpon>
     </Compile>
@@ -168,6 +171,7 @@
   <ItemGroup>
     <Content Include="Assets\body.png" />
     <Content Include="Assets\brightnessIcon.png" />
+    <Content Include="Assets\controls.png" />
     <Content Include="Assets\Fondo.png" />
     <Content Include="Assets\FondoTablero.jpg" />
     <Content Include="Assets\mano.png" />
@@ -214,6 +218,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="OptionsControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OptionsCredits.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

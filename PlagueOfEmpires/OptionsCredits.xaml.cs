@@ -20,14 +20,13 @@ namespace PlagueOfEmpires
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class OptionsControls : Page
+    public sealed partial class OptionsCredits : Page
     {
         bool goBackToMainMenu = false;
-        public OptionsControls()
+        public OptionsCredits()
         {
             this.InitializeComponent();
         }
-
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             if (e?.Parameter is bool a)
@@ -37,24 +36,14 @@ namespace PlagueOfEmpires
             base.OnNavigatedTo(e);
         }
 
-        private void ButtonMusic_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(OptionsMenu), goBackToMainMenu);
-        }
-
         private void ButtonGraphics_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(OptionsGraphics), goBackToMainMenu);
         }
 
-        private void ButtonLanguaje_Click(object sender, RoutedEventArgs e)
+        private void ButtonMusic_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OptionsLanguaje), goBackToMainMenu);
-        }
-
-        private void ButtonAccount_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(OptionsAccount), goBackToMainMenu);
+            Frame.Navigate(typeof(OptionsMenu), goBackToMainMenu);
         }
 
         private void BackButton_OnClick(object sender, RoutedEventArgs e)
@@ -66,9 +55,19 @@ namespace PlagueOfEmpires
             }
         }
 
-        private void ButtonCredits_Click(object sender, RoutedEventArgs e)
+        private void ButtonControls_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OptionsCredits), goBackToMainMenu);
+            Frame.Navigate(typeof(OptionsControls), goBackToMainMenu);
+        }
+
+        private void ButtonAccount_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(OptionsAccount), goBackToMainMenu);
+        }
+
+        private void ButtonLanguaje_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(OptionsLanguaje), goBackToMainMenu);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -20,9 +21,11 @@ namespace PlagueOfEmpires
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class OptionsGraphics : Page
+    public sealed partial class OptionsGraphics : Page, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         bool goBackToMainMenu = false;
+        string BrightnessValue = "50%";
         public OptionsGraphics()
         {
             this.InitializeComponent();
@@ -64,6 +67,18 @@ namespace PlagueOfEmpires
         private void ButtonAccount_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(OptionsAccount), goBackToMainMenu);
+        }
+
+        private void BrightnessSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            string msg = string.Format("{0}%", e.NewValue);
+            BrightnessValue = msg;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(BrightnessValue)));
+        }
+
+        private void ButtonCredits_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(OptionsCredits), goBackToMainMenu);
         }
     }
 }

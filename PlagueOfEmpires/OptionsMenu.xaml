@@ -30,8 +30,7 @@
                         <Button Content="LANGUAGE" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonLanguaje_Click"/>
                         <Button Content="CONTROLS" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonControls_Click" />
                     <Button Content="ACCOUNT" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonAccount_Click" />
-                    <Button Content="ACHIEVEMENTS" Style="{StaticResource MenuButton}" Width="170" Margin="10 200 10 10" />
-                    <Button Content="CREDITS" Width="170" Height="45" Style="{StaticResource MenuButton}"/>
+                        <Button Content="CREDITS" Width="170" Height="45" Style="{StaticResource MenuButton}" Margin="10 250 10 10" Click="ButtonCredits_Click" />
                     <Button Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="BackButton_OnClick" >
                         <Viewbox MaxHeight="30" MaxWidth="30">
                             <SymbolIcon Symbol="Back" Height="13"/>
@@ -69,37 +68,37 @@
                         <TextBlock Text="GENERAL VOLUME" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
-                                <SymbolIcon Symbol="Volume"  Height="20"/>
+                                <SymbolIcon Symbol="{x:Bind VolumeIcon, Mode=TwoWay}"  Height="20"/>
                             </Viewbox>
-                            <Slider Width="400" Foreground="Red"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10" Value="50"/>
-                            <TextBlock Text="50%" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10"/>
+                            <Slider Width="400" Foreground="Red"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10" Value="100" ValueChanged="VolumeSlider_ValueChanged"/>
+                            <TextBlock Text="{x:Bind VolumeValue, Mode=TwoWay}" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10"/>
                         </StackPanel>
                         
                         <TextBlock Text="MUSIC" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
-                                <SymbolIcon Symbol="Mute"  Height="20"/>
+                                <SymbolIcon Symbol="{x:Bind MusicIcon, Mode=TwoWay}"  Height="20"/>
                             </Viewbox>
-                            <Slider Width="400" Foreground="Red"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10" Value="0"/>
-                            <TextBlock Text="0%" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10"/>
+                            <Slider Width="400" Foreground="Red"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10" Value="100" ValueChanged="MusicSlider_ValueChanged"/>
+                            <TextBlock Text="{x:Bind MusicValue, Mode=TwoWay}" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10"/>
                         </StackPanel>
 
                         <TextBlock Text="SOUNDS" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
-                                <SymbolIcon Symbol="Volume"  Height="20"/>
+                                <SymbolIcon Symbol="{x:Bind SoundsIcon, Mode=TwoWay}"  Height="20"/>
                             </Viewbox>
-                            <Slider Width="400" Foreground="Red"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10" Value="90"/>
-                            <TextBlock Text="90%" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10"/>
+                            <Slider Width="400" Foreground="Red"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10" Value="100" ValueChanged="SoundsSlider_ValueChanged"/>
+                            <TextBlock Text="{x:Bind SoundsValue, Mode=TwoWay}" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10"/>
                         </StackPanel>
 
                         <TextBlock Text="NOTIFICATIONS" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
-                                <SymbolIcon Symbol="Volume"  Height="20"/>
+                                <SymbolIcon Symbol="{x:Bind NotificationsIcon, Mode=TwoWay}"  Height="20"/>
                             </Viewbox>
-                            <Slider Width="400" Foreground="Red"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10" Value="100"/>
-                            <TextBlock Text="100%" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10"/>
+                            <Slider Width="400" Foreground="Red"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10" Value="100" ValueChanged="NotificationsSlider_ValueChanged"/>
+                            <TextBlock Text="{x:Bind NotificationsValue, Mode=TwoWay}" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10"/>
                         </StackPanel>
                     </StackPanel>
                 </Border>
