@@ -22,7 +22,7 @@
                             </media:RadialGradientBrush.GradientStops>
                         </media:RadialGradientBrush>
                     </Border.Background>
-                    <TextBlock Text="MUSIC AND SOUNDS" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
+                    <TextBlock x:Uid="MusicTitle" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
                 </Border>
 
                 <Border HorizontalAlignment="Stretch" Height="700">
@@ -36,7 +36,7 @@
                     </Border.Background>
 
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <TextBlock Text="GENERAL VOLUME" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
+                        <TextBlock x:Uid="VolumeTextBlock" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
                                 <SymbolIcon Symbol="{x:Bind VolumeIcon, Mode=TwoWay}"  Height="20" Foreground="White"/>
@@ -45,7 +45,7 @@
                             <TextBlock Text="{x:Bind VolumeValue, Mode=TwoWay}" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10"/>
                         </StackPanel>
 
-                        <TextBlock Text="MUSIC" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
+                        <TextBlock x:Uid="MusicTextBlock" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
                                 <SymbolIcon Symbol="{x:Bind MusicIcon, Mode=TwoWay}"  Height="20" Foreground="White"/>
@@ -54,7 +54,7 @@
                             <TextBlock Text="{x:Bind MusicValue, Mode=TwoWay}" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10"/>
                         </StackPanel>
 
-                        <TextBlock Text="SOUNDS" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
+                        <TextBlock x:Uid="SoundsTextBlock" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
                                 <SymbolIcon Symbol="{x:Bind SoundsIcon, Mode=TwoWay}"  Height="20" Foreground="White"/>
@@ -63,7 +63,7 @@
                             <TextBlock Text="{x:Bind SoundsValue, Mode=TwoWay}" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10"/>
                         </StackPanel>
 
-                        <TextBlock Text="NOTIFICATIONS" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
+                        <TextBlock x:Uid="NotificationsTextBlock" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
                                 <SymbolIcon Symbol="{x:Bind NotificationsIcon, Mode=TwoWay}"  Height="20" Foreground="White"/>
