@@ -23,9 +23,12 @@ namespace PlagueOfEmpires
     /// </summary>
     public sealed partial class Multiplayer : Page
     {
+        Sound sonido;
+
         public Multiplayer()
         {
             this.InitializeComponent();
+            sonido = new Sound();
         }
 
         private void ReturnWithEscape(object sender, KeyRoutedEventArgs e)
@@ -57,12 +60,14 @@ namespace PlagueOfEmpires
 
         private async void LocalButton_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             var messageDialog = new MessageDialog("We couldn't find another player.\nPlease try again later.");
             await messageDialog.ShowAsync();
         }
 
         private async void OnlineButton_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             var messageDialog = new MessageDialog("We couldn't find an available match.\nPlease try again later.");
             await messageDialog.ShowAsync();
         }

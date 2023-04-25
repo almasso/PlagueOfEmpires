@@ -13,9 +13,12 @@ namespace PlagueOfEmpires
     {
 
         public MediaPlayer player;
+        public MediaPlayer music;
+        public bool isPlaying_;
 
         public Sound() {
             player = new MediaPlayer();
+            music = new MediaPlayer();
         }
         public async void PlayButtonSound()
         {
@@ -24,6 +27,17 @@ namespace PlagueOfEmpires
             player.AutoPlay = false;
             player.Source = MediaSource.CreateFromStorageFile(file);
             player.Play();
+        }
+
+        public async void PlayMusic()
+        {
+            Windows.Storage.StorageFolder folder = await Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("backgroundmusic.wav");
+            music.AutoPlay = true;
+            music.Source = MediaSource.CreateFromStorageFile(file);
+            music.IsLoopingEnabled = true;
+            music.Volume = 0.1f;
+            music.Play();
         }
     }
 }

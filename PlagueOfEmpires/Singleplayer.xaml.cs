@@ -23,9 +23,11 @@ namespace PlagueOfEmpires
     /// </summary>
     public sealed partial class Singleplayer : Page
     {
+        Sound sonido;
         public Singleplayer()
         {
             this.InitializeComponent();
+            sonido = new Sound();
         }
 
         private void ReturnWithEscape(object sender, KeyRoutedEventArgs e)
@@ -57,17 +59,20 @@ namespace PlagueOfEmpires
 
         private void NewGameButton_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             Frame.Navigate(typeof(PregameMenu));
         }
 
         private async void ContinueButton_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             var messageDialog = new MessageDialog("We couldn't find an available game for you to continue");
             await messageDialog.ShowAsync();
         }
 
         private async void LoadGameButton_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             var messageDialog = new MessageDialog("We couldn't find any saved games to load");
             await messageDialog.ShowAsync();
         }

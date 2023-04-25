@@ -22,6 +22,8 @@ namespace PlagueOfEmpires
     /// </summary>
     sealed partial class App : Application
     {
+        Sound tmp;
+
         /// <summary>
         /// Inicializa el objeto de aplicación Singleton. Esta es la primera línea de código creado
         /// ejecutado y, como tal, es el equivalente lógico de main() o WinMain().
@@ -66,6 +68,8 @@ namespace PlagueOfEmpires
                     // Cuando no se restaura la pila de navegación, navegar a la primera página,
                     // configurando la nueva página pasándole la información requerida como
                     //parámetro de navegación
+                    tmp = new Sound();
+                    tmp.PlayMusic();
                     rootFrame.Navigate(typeof(MainPage), e.Arguments);
                 }
                 // Asegurarse de que la ventana actual está activa.

@@ -190,6 +190,7 @@
     <Content Include="Assets\mapa.png" />
     <Content Include="Assets\muro.jpg" />
     <Content Include="Assets\taller.jpg" />
+    <Content Include="Assets\transparente.png" />
     <Content Include="Assets\virusA-Azul.png" />
     <Content Include="Assets\virusA-Morado.png" />
     <Content Include="Assets\virusA-Rojo.png" />
