@@ -7,6 +7,7 @@ using System.Numerics;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -104,6 +105,18 @@ namespace PlagueOfEmpires
         private void MiGridView_DragOver(object sender, DragEventArgs e)
         {
             e.AcceptedOperation = Windows.ApplicationModel.DataTransfer.DataPackageOperation.Move;
+        }
+
+        private async void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var messageDialog = new MessageDialog("This is info about the type 1 structures");
+            await messageDialog.ShowAsync();
+        }
+
+        private async void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var messageDialog = new MessageDialog("This is info about the map");
+            await messageDialog.ShowAsync();
         }
     }
 }

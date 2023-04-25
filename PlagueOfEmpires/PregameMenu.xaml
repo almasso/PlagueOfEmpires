@@ -60,19 +60,19 @@
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Orientation="Vertical" Width="110" Grid.Row="0" Grid.Column="0">
                                         <Image Source="./Assets/virusA.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
-                                        <RadioButton x:Name="A" GroupName="Type" IsChecked="True" Content="A" HorizontalAlignment="Stretch" Margin="25 0 0 0" Checked="RadioButtonA_Checked"/>
+                                        <RadioButton x:Name="A" GroupName="Type" IsChecked="True" Content="A" HorizontalAlignment="Stretch" Margin="25 0 0 0" />
                                     </StackPanel>
                                     <StackPanel Orientation="Vertical" Width="110" Grid.Row="1" Grid.Column="0">
                                         <Image Source="./Assets/virusC.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
-                                        <RadioButton x:Name="C" GroupName="Type" IsChecked="False" Content="C" HorizontalAlignment="Stretch" Margin="25 0 0 0" Checked="RadioButtonC_Checked"/>
+                                        <RadioButton x:Name="C" GroupName="Type" IsChecked="False" Content="C" HorizontalAlignment="Stretch" Margin="25 0 0 0" />
                                     </StackPanel>
                                     <StackPanel Orientation="Vertical" Width="110" Grid.Row="0" Grid.Column="1">
                                         <Image Source="./Assets/virusB.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
-                                        <RadioButton x:Name="B" GroupName="Type" IsChecked="False" Content="B" HorizontalAlignment="Stretch" Margin="25 0 0 0" Checked="RadioButtonB_Checked"/>
+                                        <RadioButton x:Name="B" GroupName="Type" IsChecked="False" Content="B" HorizontalAlignment="Stretch" Margin="25 0 0 0" />
                                     </StackPanel>
                                     <StackPanel Orientation="Vertical" Width="110" Grid.Row="1" Grid.Column="1">
                                         <Image Source="./Assets/virusD.png" HorizontalAlignment="Center" Margin="5" Height="80"/>
-                                        <RadioButton x:Name="D" GroupName="Type" IsChecked="False" Content="D" HorizontalAlignment="Stretch" Margin="25 0 0 0" Checked="RadioButtonD_Checked"/>
+                                        <RadioButton x:Name="D" GroupName="Type" IsChecked="False" Content="D" HorizontalAlignment="Stretch" Margin="25 0 0 0" />
                                     </StackPanel>
                                 </Grid>
                             </Border>
