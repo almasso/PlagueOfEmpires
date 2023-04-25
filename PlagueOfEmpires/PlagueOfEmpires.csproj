@@ -164,6 +164,7 @@
     <Compile Include="Singleplayer.xaml.cs">
       <DependentUpon>Singleplayer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Sound.cs" />
     <Compile Include="ViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -176,6 +177,7 @@
     <Content Include="Assets\biblioteca.jpg" />
     <Content Include="Assets\body.png" />
     <Content Include="Assets\brightnessIcon.png" />
+    <Content Include="Assets\Button.wav" />
     <Content Include="Assets\catedral.jpg" />
     <Content Include="Assets\controls.png" />
     <Content Include="Assets\estadio.jpg" />

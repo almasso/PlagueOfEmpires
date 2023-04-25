@@ -13,10 +13,14 @@ namespace PlagueOfEmpires
     {
 
         public MediaPlayer player;
-        public static async void PlayButtonSound(string filename)
+
+        public Sound() {
+            player = new MediaPlayer();
+        }
+        public async void PlayButtonSound()
         {
             Windows.Storage.StorageFolder folder = await Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
-            Windows.Storage.StorageFile file = await folder.GetFileAsync(filename);
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("Button.wav");
             player.AutoPlay = false;
             player.Source = MediaSource.CreateFromStorageFile(file);
             player.Play();

@@ -25,29 +25,35 @@ namespace PlagueOfEmpires
     public sealed partial class MainPage : Page
     {
         Controlador gameController;
+        Sound sonido;
         public MainPage()
         {
             this.InitializeComponent();
             gameController = new Controlador(this);
+            sonido = new Sound();
         }
 
         private void Singleplayer_Button(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             Frame.Navigate(typeof(Singleplayer));
         }
 
         private void Multiplayer_Button(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             Frame.Navigate(typeof(Multiplayer));
         }
 
         private void DLC_Button(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             Frame.Navigate(typeof(AdditionalContent));
-	    }
+        }
 
         private void Options_OnClick(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             // The Page.Frame property is a reference to the Frame that's displaying the page.
             // Use Frame.Navigate to go to the next page.
             Frame.Navigate(typeof(OptionsMenu));
@@ -55,6 +61,7 @@ namespace PlagueOfEmpires
 
         private void QuitButton_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             Application.Current.Exit();
         }
     }
