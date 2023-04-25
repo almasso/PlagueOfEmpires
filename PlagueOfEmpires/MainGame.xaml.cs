@@ -123,6 +123,6 @@ namespace PlagueOfEmpires
         {
             var messageDialog = new MessageDialog("This is info about the map");
             await messageDialog.ShowAsync();
-        }
+        }       
     }
 }
