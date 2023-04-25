@@ -29,9 +29,12 @@ namespace PlagueOfEmpires
         public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<VMMod> ListaMods { get; } = new ObservableCollection<VMMod>();
 
+        Sound sonido;
+
         public AdditionalContent()
         {
             this.InitializeComponent();
+            sonido = new Sound();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -92,6 +95,7 @@ namespace PlagueOfEmpires
             int index = MiListView.Items.IndexOf(item);
             Mod m = ModModel.GetModById(index);
             m.Activado = true;
+            sonido.PlayButtonSound();
         }
 
         private void Deactivate(object sender, RoutedEventArgs e)
@@ -112,6 +116,7 @@ namespace PlagueOfEmpires
             int index = MiListView.Items.IndexOf(item);
             Mod m = ModModel.GetModById(index);
             m.Activado = false;
+            sonido.PlayButtonSound();
         }
     }
 }
