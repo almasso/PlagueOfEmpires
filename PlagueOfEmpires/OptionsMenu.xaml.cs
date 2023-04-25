@@ -33,15 +33,18 @@ namespace PlagueOfEmpires
         string SoundsValue = "100%";
         string VolumeValue = "100%";
         string NotificationsValue = "100%";
+        Sound sonido;
 
         public OptionsMenu()
         {
             this.InitializeComponent();
             FrameSecundario.SourcePageType = typeof(OptionsMusic);
+            sonido = new Sound();
         }
 
         private void BackButton_OnClick(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             if (Frame.CanGoBack)
             {
                 Frame.GoBack();
@@ -50,6 +53,7 @@ namespace PlagueOfEmpires
 
         private void ButtonGraphics_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             FrameSecundario.SourcePageType = typeof(OptionsGraphics);
 
 
@@ -65,6 +69,7 @@ namespace PlagueOfEmpires
 
         private void ButtonLanguaje_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             FrameSecundario.SourcePageType = typeof(OptionsLanguaje);
 
 
@@ -80,6 +85,7 @@ namespace PlagueOfEmpires
 
         private void ButtonControls_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             FrameSecundario.SourcePageType = typeof(OptionsControls);
 
 
@@ -95,6 +101,7 @@ namespace PlagueOfEmpires
 
         private void ButtonAccount_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             FrameSecundario.SourcePageType = typeof(OptionsAccount);
 
 
@@ -150,6 +157,7 @@ namespace PlagueOfEmpires
 
         private void ButtonCredits_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             FrameSecundario.SourcePageType = typeof(OptionsCredits);
 
 
@@ -165,6 +173,7 @@ namespace PlagueOfEmpires
 
         private void ButtonMusic_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             FrameSecundario.SourcePageType = typeof(OptionsMusic);
 
             Button but = sender as Button;

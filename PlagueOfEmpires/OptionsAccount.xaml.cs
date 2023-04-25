@@ -25,14 +25,18 @@ namespace PlagueOfEmpires
         string SignInButton = "SIGN IN";
         string SignInText = "SIGN IN";
         string AccountText = "DON'T HAVE AN ACCOUNT?";
+        Sound sonido;
+
         public OptionsAccount()
         {
             this.InitializeComponent();
+            sonido = new Sound();
         }
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
-            if(SignUpButtonName.Content.ToString() == "SIGN UP")
+            sonido.PlayButtonSound();
+            if (SignUpButtonName.Content.ToString() == "SIGN UP")
             {
                 SignUpButton = "SIGN IN";
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SignUpButton)));

@@ -22,13 +22,17 @@ namespace PlagueOfEmpires
     /// </summary>
     public sealed partial class PauseMenu : Page
     {
+        Sound sonido;
+
         public PauseMenu()
         {
             this.InitializeComponent();
+            sonido = new Sound();
         }
 
         private void BackButton_OnClick(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             if (Frame.CanGoBack)
             {
                 Frame.GoBack();
@@ -37,16 +41,19 @@ namespace PlagueOfEmpires
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             Frame.Navigate(typeof(MainPage));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             Frame.Navigate(typeof(OptionsMenu));
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             if (Frame.CanGoBack)
             {
                 Frame.GoBack();

@@ -27,13 +27,17 @@ namespace PlagueOfEmpires
         public event PropertyChangedEventHandler PropertyChanged;
         string Porcentaje = "50%";
         bool isRandom = true;
+        Sound sonido;
+
         public PregameMenu()
         {
             this.InitializeComponent();
+            sonido = new Sound();
         }
 
         private void BackButton_OnClick(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             if (Frame.CanGoBack)
             {
                 Frame.GoBack();
@@ -42,6 +46,7 @@ namespace PlagueOfEmpires
 
         private void PlayButton_OnClick(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             string[] a = new string[3];
             if (Enemy1A.IsSelected == true) a[0] = "./Assets/virusA-Morado.png";
             else if (Enemy1B.IsSelected == true) a[0] = "./Assets/virusB-Morado.png";
@@ -59,11 +64,6 @@ namespace PlagueOfEmpires
             else if (Enemy2D.IsSelected == true) a[2] = "./Assets/virusD-Azul.png";
 
             Frame.Navigate(typeof(MainGame), a);
-        }
-
-        private void ResetButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
@@ -85,34 +85,16 @@ namespace PlagueOfEmpires
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(isRandom)));
         }
 
-        private void RadioButtonA_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RadioButtonB_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RadioButtonC_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RadioButtonD_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private async void SavePresetButton_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             var messageDialog = new MessageDialog("Preset saved");
             await messageDialog.ShowAsync();
         }
 
         private async void LoadPresetButton_Click(object sender, RoutedEventArgs e)
         {
+            sonido.PlayButtonSound();
             var messageDialog = new MessageDialog("You have no presets available to load");
             await messageDialog.ShowAsync();
         }

@@ -123,6 +123,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controlador.cs" />
+    <Compile Include="LanguageBool.cs" />
     <Compile Include="MainGame.xaml.cs">
       <DependentUpon>MainGame.xaml</DependentUpon>
     </Compile>
