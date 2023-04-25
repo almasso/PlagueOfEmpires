@@ -193,10 +193,10 @@
     <value>High</value>
   </data>
   <data name="LanguajeOptionButton.Content" xml:space="preserve">
-    <value>Lenguaje</value>
+    <value>Language</value>
   </data>
   <data name="LanguajeTitle.Text" xml:space="preserve">
-    <value>Languaje</value>
+    <value>Language</value>
   </data>
   <data name="LoadPresetItem.Content" xml:space="preserve">
     <value>Load Preset</value>
