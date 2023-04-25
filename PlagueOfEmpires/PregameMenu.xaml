@@ -24,7 +24,7 @@
                         </media:RadialGradientBrush>
                     </Border.Background>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                        <TextBlock Text="GAME SETTINGS" FontSize="60" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="500 0 0 0"/>
+                        <TextBlock x:Uid="GameSettingsTitle" FontSize="60" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="500 0 0 0"/>
                         <Button Style="{StaticResource MenuButton}" Width="140" VerticalAlignment="Center" Margin="230 0 0 0" Click="BackButton_OnClick" Height="50" >
                             <Viewbox MaxHeight="30" MaxWidth="30">
                                 <SymbolIcon Symbol="Back" Height="17"/>
@@ -45,9 +45,9 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
                         <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" Width="470">
-                            <TextBlock Text="NAME OF THE VIRUS" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
+                            <TextBlock x:Uid="VirusNameTextBlock" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
                             <TextBox Background="White" Foreground="Gray" Text="Cov-Sars 19" BorderBrush="#8b0707" BorderThickness="5" Margin="50 20 50 20" FontFamily="{StaticResource Aboreto}"/>
-                            <TextBlock Text="TYPE OF VIRUS" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
+                            <TextBlock x:Uid="VirusTypeTextBlock" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
                             <Border Height="240" Width="220" Margin="0 10 0 0">
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -76,46 +76,46 @@
                                     </StackPanel>
                                 </Grid>
                             </Border>
-                            <TextBlock Text="DIFFICULTY" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
+                            <TextBlock x:Uid="DifficultyTextBlock" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
                             <StackPanel Orientation="Horizontal">
                                 <Slider Width="380" Foreground="Red" VerticalAlignment="Center" Margin="20 10 10 10" Value="50" ValueChanged="Slider_ValueChanged"/>
                                 <TextBlock x:Name="DifficultyTextBlock" Text="{x:Bind Porcentaje, Mode=TwoWay}" FontSize="25" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
                             </StackPanel>
-                            <TextBlock Text="CUSTOMIZE ENEMIES" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
+                            <TextBlock x:Uid="CustomizeTextBlock" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
 
-                            <ComboBox Header="Enemy1" Background="White" Foreground="Red" Margin="0" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
-                                <ComboBoxItem x:Name="Enemy1A" Content="Virus Type A"/>
-                                <ComboBoxItem x:Name="Enemy1B" Content="Virus Type B" IsSelected="True"/>
-                                <ComboBoxItem x:Name="Enemy1C" Content="Virus Type C"/>
-                                <ComboBoxItem x:Name="Enemy1D" Content="Virus Type D"/>
+                            <ComboBox x:Uid="Enemy1Header" Background="White" Foreground="Red" Margin="0" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
+                                <ComboBoxItem x:Name="Enemy1A" x:Uid="TypeAItem"/>
+                                <ComboBoxItem x:Name="Enemy1B" x:Uid="TypeBItem" IsSelected="True"/>
+                                <ComboBoxItem x:Name="Enemy1C" x:Uid="TypeCItem"/>
+                                <ComboBoxItem x:Name="Enemy1D" x:Uid="TypeDItem"/>
                             </ComboBox>
-                            <ComboBox Header="Enemy2" Background="White" Foreground="Red" Margin="10 30 10 10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
-                                <ComboBoxItem x:Name="Enemy2A" Content="Virus Type A"/>
-                                <ComboBoxItem x:Name="Enemy2B" Content="Virus Type B"/>
-                                <ComboBoxItem x:Name="Enemy2C" Content="Virus Type C" IsSelected="True"/>
-                                <ComboBoxItem x:Name="Enemy2D" Content="Virus Type D"/>
+                            <ComboBox x:Uid="Enemy2Header" Background="White" Foreground="Red" Margin="10 30 10 10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
+                                <ComboBoxItem x:Name="Enemy2A" x:Uid="TypeAItem"/>
+                                <ComboBoxItem x:Name="Enemy2B" x:Uid="TypeBItem"/>
+                                <ComboBoxItem x:Name="Enemy2C" x:Uid="TypeCItem" IsSelected="True"/>
+                                <ComboBoxItem x:Name="Enemy2D" x:Uid="TypeDItem"/>
                             </ComboBox>
                         </StackPanel>
 
                         <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" Width="470">
-                            <TextBlock Text="ALLOW ALLIANCES" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
+                            <TextBlock x:Uid="AlliancesTextBlock" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 30 0 0"/>
                             <CheckBox HorizontalAlignment="Center" Margin="100 20 0 0" Foreground="#8b0707"  />
-                            <TextBlock Text="MAP SIZE" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 50 0 0"/>
-                            <ComboBox Header="Tile Number" Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
+                            <TextBlock x:Uid="MapTextBlock" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 50 0 0"/>
+                            <ComboBox x:Uid="TileNumerHeader" Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
                                 <ComboBoxItem Content="100 x 100" IsSelected="True"/>
                                 <ComboBoxItem Content="200 x 200"/>
                                 <ComboBoxItem Content="500 x 500"/>
                                 <ComboBoxItem Content="1000 x 1000"/>
                             </ComboBox>
-                            <TextBlock Text="GAME SPEED" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 50 0 0"/>
-                            <ComboBox Header="Progress rate" Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
-                                <ComboBoxItem Content="Slow"/>
-                                <ComboBoxItem Content="Normal" IsSelected="True"/>
-                                <ComboBoxItem Content="Fast"/>
-                                <ComboBoxItem Content="Expert"/>
+                            <TextBlock x:Uid="SpeedTextBlock" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Margin="0 50 0 0"/>
+                            <ComboBox x:Uid="ProgressHeader" Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
+                                <ComboBoxItem x:Uid="SlowItem"/>
+                                <ComboBoxItem x:Uid="NormalItem" IsSelected="True"/>
+                                <ComboBoxItem x:Uid="FastItem"/>
+                                <ComboBoxItem x:Uid="ExpertItem"/>
                             </ComboBox>
                             <StackPanel Orientation="Horizontal"  Margin="0 60 0 0">
-                                <TextBlock Text="RANDOM SPAWN POINT" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White"  FontWeight="ExtraBold" VerticalAlignment="Center" Margin="110 0 0 0"/>
+                                <TextBlock x:Uid="SpawnPointTextBlock" FontSize="20" FontFamily="{StaticResource Aboreto}" Foreground="White"  FontWeight="ExtraBold" VerticalAlignment="Center" Margin="110 0 0 0" />
                                 <CheckBox x:Name="RandomSpawn" Margin="20 0 0 0" Foreground="#8b0707" Checked="MapCheckBox_OnChecked" Unchecked="MapCheckBox_OnUnchecked"/>
                             </StackPanel>
                             <ScrollViewer IsTabStop="True" IsEnabled="{x:Bind isRandom, Mode=TwoWay}" x:Name="MyScroll" Grid.Row="1" ZoomMode="Enabled" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" Width="350" Height="250" Margin="20">
@@ -127,12 +127,12 @@
                         <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" Width="470">
                             <Border BorderBrush="#8b0707" BorderThickness="5" Margin="40 40 40 20" Height="380" Width="380">
                                 <StackPanel Orientation="Vertical">
-                                    <TextBox Background="White" Foreground="Gray" Margin="10 50 10 15" Text="Preset 1" TextAlignment="Center" FontSize="20" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}" Width="300" Height="40" HorizontalAlignment="Center" CornerRadius="20"/>
-                                    <Button Content="SAVE PRESET" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15 50 15 15" Click="SavePresetButton_Click"/>
-                                    <Button Content="LOAD PRESET" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15 50 15 15" Click="LoadPresetButton_Click"/>
+                                    <TextBox Background="White" Foreground="Gray" Margin="10 50 10 15" x:Uid="PresetNameTextBox" TextAlignment="Center" FontSize="20" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}" Width="300" Height="40" HorizontalAlignment="Center" CornerRadius="20"/>
+                                    <Button x:Uid="SavePresetButton" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15 50 15 15" Click="SavePresetButton_Click"/>
+                                    <Button x:Uid="LoadPresetItem" Style="{StaticResource MainButton}" FontSize="20" Width="300" Height="50" CornerRadius="30" Margin="15 50 15 15" Click="LoadPresetButton_Click"/>
                                 </StackPanel>
                             </Border>
-                            <Button Content="Play" Style="{StaticResource MainButton}" FontSize="70" Width="370" Height="120" CornerRadius="50" Margin="20 200 20 20" Click="PlayButton_OnClick"/>
+                            <Button x:Uid="PlayButton" Style="{StaticResource MainButton}" FontSize="70" Width="370" Height="120" CornerRadius="50" Margin="20 200 20 20" Click="PlayButton_OnClick"/>
                         </StackPanel>
                     </StackPanel>
                 </Border>

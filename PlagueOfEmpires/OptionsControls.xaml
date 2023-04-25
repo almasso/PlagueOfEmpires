@@ -21,7 +21,7 @@
                             </media:RadialGradientBrush.GradientStops>
                         </media:RadialGradientBrush>
                     </Border.Background>
-                    <TextBlock Text="CONTROLS" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
+                    <TextBlock x:Uid="ControlsTitle" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
                 </Border>
 
                 <Border HorizontalAlignment="Stretch" Height="700">

@@ -21,7 +21,7 @@
                             </media:RadialGradientBrush.GradientStops>
                         </media:RadialGradientBrush>
                     </Border.Background>
-                    <TextBlock Text="ACCOUNT" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
+                    <TextBlock x:Uid="AccountTitle" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
                 </Border>
 
                 <Border HorizontalAlignment="Stretch" Height="700">
@@ -40,16 +40,16 @@
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE77B;"  Height="20"/>
                             </Viewbox>
-                            <TextBox Background="White" Foreground="Gray" Text="USERNAME / EMAIL" BorderBrush="#8b0707" BorderThickness="5" Margin="10" Width="400" FontFamily="{StaticResource Aboreto}"/>
+                            <TextBox Background="White" Foreground="Gray" x:Uid="EmailTextBox" BorderBrush="#8b0707" BorderThickness="5" Margin="10" Width="400" FontFamily="{StaticResource Aboreto}"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0 30 0 0">
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72E;"  Height="20"/>
                             </Viewbox>
-                            <TextBox Background="White" Foreground="Gray" Text="PASSWORD" BorderBrush="#8b0707" BorderThickness="5" Margin="10" Width="400" FontFamily="{StaticResource Aboreto}"/>
+                            <TextBox Background="White" Foreground="Gray" x:Uid="PasswordTextBox" BorderBrush="#8b0707" BorderThickness="5" Margin="10" Width="400" FontFamily="{StaticResource Aboreto}"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="REMEMBER ME" FontSize="12" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="50 10 10 10"/>
+                            <TextBlock x:Uid="RememberMeTextBlock" FontSize="12" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="50 10 10 10"/>
                             <CheckBox/>
                         </StackPanel>
                         <Button FontSize="30" Content="{x:Bind SignInButton, Mode=TwoWay}" Style="{StaticResource MainButton}" Height="60" Width="250" CornerRadius="30"/>
