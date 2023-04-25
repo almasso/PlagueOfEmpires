@@ -290,11 +290,19 @@
       <Version>5.0.0-preview.5.20278.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <PRIResource Include="Strings\de-DE\de-DE.resw" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Fonts\Aboreto-Regular.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\en-US\en-US.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\es-ES\es-ES.resw" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

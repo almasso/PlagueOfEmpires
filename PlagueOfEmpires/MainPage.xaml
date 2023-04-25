@@ -32,10 +32,10 @@
 
         <Viewbox Grid.Row="1">
             <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" TabFocusNavigation="Cycle" XYFocusKeyboardNavigation="Enabled">
-                <Button Content="Singleplayer" Style="{StaticResource MainButton}" Height="95" Click="Singleplayer_Button" IsTabStop="True" TabIndex="1"/>
-                <Button Content="Multiplayer" Style="{StaticResource MainButton}" Click="Multiplayer_Button" IsTabStop="True" TabIndex="2"/>
+                <Button x:Uid="SingleplayerButton" Style="{StaticResource MainButton}" Height="95" Click="Singleplayer_Button" IsTabStop="True" TabIndex="1"/>
+                <Button x:Uid="MultiplayerButton" Style="{StaticResource MainButton}" Click="Multiplayer_Button" IsTabStop="True" TabIndex="2"/>
                 <Button Style="{StaticResource MainButton}" FontSize="40" Click="DLC_Button" IsTabStop="True" TabIndex="3">
-                    <TextBlock Text="Mods &amp; additional content" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
+                    <TextBlock x:Uid="DLCButton" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
                 </Button>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="576">
                     <Button Style="{StaticResource MainButton}" Width="228" IsTabStop="True" TabIndex="4">

@@ -123,10 +123,10 @@
         <Viewbox Grid.Row="1">
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,55,0,0" x:Name="BotonesPrincipales">
-                    <Button Content="Singleplayer" Style="{StaticResource MainButton}" Height="95" IsEnabled="False"/>
-                    <Button Content="Multiplayer" Style="{StaticResource MainButton}" IsEnabled="False"/>
+                    <Button x:Uid="SingleplayerButton" Style="{StaticResource MainButton}" Height="95" IsEnabled="False"/>
+                        <Button x:Uid="MultiplayerButton" Style="{StaticResource MainButton}" IsEnabled="False"/>
                     <Button Style="{StaticResource MainButton}" FontSize="40">
-                        <TextBlock Text="Mods &amp; additional content" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
+                        <TextBlock x:Uid="DLCButton" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
                     </Button>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="576">
                         <Button Style="{StaticResource MainButton}" Width="228" IsEnabled="False">

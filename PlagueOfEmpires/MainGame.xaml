@@ -56,28 +56,28 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 
-                <TextBlock Text="TOTAL POPULATION: 6.021.000" FontFamily="{StaticResource Aboreto}" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" TextAlignment="Center" HorizontalTextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock x:Uid="MainGamePopulationCountText" FontFamily="{StaticResource Aboreto}" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" TextAlignment="Center" HorizontalTextAlignment="Center" FontWeight="Bold"/>
                 <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="700" Margin="100,0,1,0">
                     <Border Background="White" BorderBrush="#8b0707" BorderThickness="3" Width="100" Height="32">
-                        <TextBlock Text="Resource 1" FontFamily="{StaticResource Aboreto}" Foreground="#8b0707" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock x:Uid="MainGameResource1Text" FontFamily="{StaticResource Aboreto}" Foreground="#8b0707" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                     <Border Background="White" BorderBrush="#8b0707" BorderThickness="3" Width="100" Height="32">
-                        <TextBlock Text="Resource 2" FontFamily="{StaticResource Aboreto}" Foreground="#8b0707" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock x:Uid="MainGameResource2Text" FontFamily="{StaticResource Aboreto}" Foreground="#8b0707" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                     <Border Background="White" BorderBrush="#8b0707" BorderThickness="3" Width="100" Height="32">
-                        <TextBlock Text="Resource 3" FontFamily="{StaticResource Aboreto}" Foreground="#8b0707" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock x:Uid="MainGameResource3Text" FontFamily="{StaticResource Aboreto}" Foreground="#8b0707" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                     <Border Background="White" BorderBrush="#8b0707" BorderThickness="3" Width="100" Height="32">
-                        <TextBlock Text="Resource 4" FontFamily="{StaticResource Aboreto}" Foreground="#8b0707" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock x:Uid="MainGameResource4Text" FontFamily="{StaticResource Aboreto}" Foreground="#8b0707" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                     <Border Background="White" BorderBrush="#8b0707" BorderThickness="3" Width="100" Height="32">
-                        <TextBlock Text="Resource 5" FontFamily="{StaticResource Aboreto}" Foreground="#8b0707" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock x:Uid="MainGameResource5Text" FontFamily="{StaticResource Aboreto}" Foreground="#8b0707" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                 </StackPanel>
 
                 <StackPanel Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <TextBlock Grid.Column="2" Text="Local Time: 21:53" FontFamily="{StaticResource Aboreto}"  Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="10" TextAlignment="Center" HorizontalTextAlignment="Center" FontWeight="Bold"/>
-                    <TextBlock Grid.Column="2" Text="Remaining Time: 15:00" FontFamily="{StaticResource Aboreto}"  Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="10" TextAlignment="Center" HorizontalTextAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Uid="MainGameLocalTimeText" Grid.Column="2" FontFamily="{StaticResource Aboreto}"  Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="10" TextAlignment="Center" HorizontalTextAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Uid="MainGameRemainingTimeText" Grid.Column="2" FontFamily="{StaticResource Aboreto}"  Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="10" TextAlignment="Center" HorizontalTextAlignment="Center" FontWeight="Bold"/>
                 </StackPanel>
             </Grid>
         </Viewbox>
@@ -152,13 +152,13 @@
             </Viewbox>
             <Viewbox Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <StackPanel Orientation="Vertical">
-                    <Button Content="Structure type 1" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
-                    <Button Content="Structure type 2" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
-                    <Button Content="Structure type 3" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
-                    <Button Content="Structure type 4" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
-                    <Button Content="Structure type 5" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
-                    <Button Content="Structure type 6" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
-                    <Button Content="Structure type 7" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
+                    <Button x:Uid="MainGameStructure1Button" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0"/>
+                    <Button x:Uid="MainGameStructure2Button" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
+                    <Button x:Uid="MainGameStructure3Button" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
+                    <Button x:Uid="MainGameStructure4Button" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
+                    <Button x:Uid="MainGameStructure5Button" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
+                    <Button x:Uid="MainGameStructure6Button" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
+                    <Button x:Uid="MainGameStructure7Button" Style="{StaticResource ResourceButtons}" HorizontalAlignment="Stretch" Margin="0" IsEnabled="False"/>
                 </StackPanel>
             </Viewbox>
 

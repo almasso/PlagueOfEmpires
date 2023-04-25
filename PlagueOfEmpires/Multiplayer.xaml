@@ -32,10 +32,10 @@
         <Viewbox Grid.Row="1">
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,55,0,0" x:Name="BotonesPrincipales">
-                    <Button Content="Singleplayer" Style="{StaticResource MainButton}" Height="95" IsEnabled="False"/>
-                    <Button Content="Multiplayer" Style="{StaticResource MainButton}"/>
+                    <Button x:Uid="SingleplayerButton" Style="{StaticResource MainButton}" Height="95" IsEnabled="False"/>
+                    <Button x:Uid="MultiplayerButton" Style="{StaticResource MainButton}"/>
                     <Button Style="{StaticResource MainButton}" FontSize="40" IsEnabled="False">
-                        <TextBlock Text="Mods &amp; additional content" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
+                        <TextBlock x:Uid="DLCButton" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
                     </Button>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="576">
                         <Button Style="{StaticResource MainButton}" Width="228" IsEnabled="False">
@@ -57,8 +57,8 @@
                     <Polyline Stroke="White" StrokeThickness="5" Points="47,450 97,450"/>
                 </Canvas>
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,140,0,0">
-                    <Button Content="Local multiplayer" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="LocalButton_Click"/>
-                    <Button Content="Online multiplayer" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="OnlineButton_Click"/>
+                    <Button x:Uid="MultiplayerLocalButton" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="LocalButton_Click"/>
+                    <Button x:Uid="MultiplayerOnlineButton" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="OnlineButton_Click"/>
                 </StackPanel>
             </StackPanel>
         </Viewbox>

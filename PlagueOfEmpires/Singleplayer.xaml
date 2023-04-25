@@ -32,10 +32,10 @@
         <Viewbox Grid.Row="1">
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,55,0,0" x:Name="BotonesPrincipales">
-                    <Button Content="Singleplayer" Style="{StaticResource MainButton}" Height="95"/>
-                    <Button Content="Multiplayer" Style="{StaticResource MainButton}" IsEnabled="False"/>
+                    <Button x:Uid="SingleplayerButton" Style="{StaticResource MainButton}" Height="95"/>
+                    <Button x:Uid="MultiplayerButton" Style="{StaticResource MainButton}" IsEnabled="False"/>
                     <Button Style="{StaticResource MainButton}" FontSize="40" IsEnabled="False">
-                        <TextBlock Text="Mods &amp; additional content" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
+                        <TextBlock x:Uid="DLCButton" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
                     </Button>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="576">
                         <Button Style="{StaticResource MainButton}" Width="228" IsEnabled="False">
@@ -57,9 +57,9 @@
                     <Polyline Stroke="White" StrokeThickness="5" Points="47,520 97,520"/>
                 </Canvas>
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,55,0,0">
-                    <Button Content="New game" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="NewGameButton_Click"/>
-                    <Button Content="Continue game" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="ContinueButton_Click"/>
-                    <Button Content="Load game" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="LoadGameButton_Click"/>
+                    <Button x:Uid="SingleplayerNewGameButton" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="NewGameButton_Click"/>
+                    <Button x:Uid="SingleplayerContinueButton" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="ContinueButton_Click"/>
+                    <Button x:Uid="SingleplayerLoadButton" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="LoadGameButton_Click"/>
                 </StackPanel>
             </StackPanel>
         </Viewbox>
