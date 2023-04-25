@@ -117,91 +117,91 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AccountOptionButton" xml:space="preserve">
+  <data name="AccountOptionButton.Content" xml:space="preserve">
     <value>Account</value>
   </data>
-  <data name="AccountTitle" xml:space="preserve">
+  <data name="AccountTitle.Text" xml:space="preserve">
     <value>Account</value>
   </data>
-  <data name="AlliancesTextBlock" xml:space="preserve">
+  <data name="AlliancesTextBlock.Text" xml:space="preserve">
     <value>Allow Alliances</value>
   </data>
-  <data name="BrightnessTextBlock" xml:space="preserve">
+  <data name="BrightnessTextBlock.Text" xml:space="preserve">
     <value>Brightness</value>
   </data>
-  <data name="ColorblindTextBlock" xml:space="preserve">
+  <data name="ColorblindTextBlock.Text" xml:space="preserve">
     <value>Colorblind Mode</value>
   </data>
-  <data name="ControlsOptionButton" xml:space="preserve">
+  <data name="ControlsOptionButton.Content" xml:space="preserve">
     <value>Controls</value>
   </data>
-  <data name="ControlsTitle" xml:space="preserve">
+  <data name="ControlsTitle.Text" xml:space="preserve">
     <value>Controls</value>
   </data>
-  <data name="CreditsAlex" xml:space="preserve">
+  <data name="CreditsAlex.Text" xml:space="preserve">
     <value>Alejandro Massó Martínez</value>
   </data>
-  <data name="CreditsAndrea" xml:space="preserve">
+  <data name="CreditsAndrea.Text" xml:space="preserve">
     <value>Andrea Vega Saugar</value>
   </data>
-  <data name="CreditsOptionButton" xml:space="preserve">
+  <data name="CreditsOptionButton.Content" xml:space="preserve">
     <value>Credits</value>
   </data>
-  <data name="CreditsTextBlock" xml:space="preserve">
+  <data name="CreditsTextBlock.Text" xml:space="preserve">
     <value>lead programmers, art directors and ui designers</value>
   </data>
-  <data name="CreditsTitle" xml:space="preserve">
+  <data name="CreditsTitle.Text" xml:space="preserve">
     <value>Credits</value>
   </data>
-  <data name="CustomizeTextBlock" xml:space="preserve">
+  <data name="CustomizeTextBlock.Text" xml:space="preserve">
     <value>Customize Enemies</value>
   </data>
-  <data name="DifficultyTextBlock" xml:space="preserve">
+  <data name="DifficultyTextBlock.Text" xml:space="preserve">
     <value>Difficulty</value>
   </data>
   <data name="DLCButton.Text" xml:space="preserve">
     <value>Mods &amp;amp; additional content</value>
   </data>
-  <data name="EmailTextBox" xml:space="preserve">
+  <data name="EmailTextBox.Text" xml:space="preserve">
     <value>Email / Username</value>
   </data>
-  <data name="Enemy1Header" xml:space="preserve">
+  <data name="Enemy1Header.Header" xml:space="preserve">
     <value>Enemy 1</value>
   </data>
-  <data name="Enemy2Header" xml:space="preserve">
+  <data name="Enemy2Header.Header" xml:space="preserve">
     <value>Enemy 2</value>
   </data>
-  <data name="ExpertItem" xml:space="preserve">
+  <data name="ExpertItem.Content" xml:space="preserve">
     <value>Expert</value>
   </data>
-  <data name="FastItem" xml:space="preserve">
+  <data name="FastItem.Content" xml:space="preserve">
     <value>Fast</value>
   </data>
-  <data name="FullscreenItem" xml:space="preserve">
+  <data name="FullscreenItem.Content" xml:space="preserve">
     <value>FullScreen</value>
   </data>
-  <data name="GameSettingsTitle" xml:space="preserve">
+  <data name="GameSettingsTitle.Text" xml:space="preserve">
     <value>Game Settings</value>
   </data>
-  <data name="GraphicsOptionButton" xml:space="preserve">
+  <data name="GraphicsOptionButton.Content" xml:space="preserve">
     <value>Graphics</value>
   </data>
-  <data name="GraphicsTitle" xml:space="preserve">
+  <data name="GraphicsTitle.Text" xml:space="preserve">
     <value>Graphics</value>
   </data>
-  <data name="HighItem" xml:space="preserve">
+  <data name="HighItem.Content" xml:space="preserve">
     <value>High</value>
   </data>
-  <data name="LanguajeOptionButton" xml:space="preserve">
+  <data name="LanguajeOptionButton.Content" xml:space="preserve">
     <value>Lenguaje</value>
   </data>
-  <data name="LanguajeTitle" xml:space="preserve">
+  <data name="LanguajeTitle.Text" xml:space="preserve">
     <value>Languaje</value>
   </data>
-  <data name="LoadPresetItem" xml:space="preserve">
+  <data name="LoadPresetItem.Content" xml:space="preserve">
     <value>Load Preset</value>
   </data>
-  <data name="LowItem" xml:space="preserve">
+  <data name="LowItem.Content" xml:space="preserve">
     <value>Low</value>
   </data>
   <data name="MainGameLocalTimeText.Text" xml:space="preserve">
@@ -249,13 +249,13 @@
   <data name="MainGameStructure7Button.Content" xml:space="preserve">
     <value>Structure type 7</value>
   </data>
-  <data name="MainMenuButton" xml:space="preserve">
+  <data name="MainMenuButton.Content" xml:space="preserve">
     <value>Main Menu</value>
   </data>
-  <data name="MapTextBlock" xml:space="preserve">
+  <data name="MapTextBlock.Text" xml:space="preserve">
     <value>Map Size</value>
   </data>
-  <data name="MediumItem" xml:space="preserve">
+  <data name="MediumItem.Content" xml:space="preserve">
     <value>Medium</value>
   </data>
   <data name="MultiplayerButton.Content" xml:space="preserve">
@@ -267,52 +267,52 @@
   <data name="MultiplayerOnlineButton.Content" xml:space="preserve">
     <value>Online multiplayer</value>
   </data>
-  <data name="MusicOptionButton" xml:space="preserve">
+  <data name="MusicOptionButton.Content" xml:space="preserve">
     <value>Music and Sounds</value>
   </data>
-  <data name="MusicTextBlock" xml:space="preserve">
+  <data name="MusicTextBlock.Text" xml:space="preserve">
     <value>Music</value>
   </data>
-  <data name="MusicTitle" xml:space="preserve">
+  <data name="MusicTitle.Text" xml:space="preserve">
     <value>Music and Sounds</value>
   </data>
-  <data name="NormalItem" xml:space="preserve">
+  <data name="NormalItem.Content" xml:space="preserve">
     <value>Normal</value>
   </data>
-  <data name="NotificationsTextBlock" xml:space="preserve">
+  <data name="NotificationsTextBlock.Text" xml:space="preserve">
     <value>Notifications</value>
   </data>
-  <data name="PasswordTextBox" xml:space="preserve">
+  <data name="PasswordTextBox.Text" xml:space="preserve">
     <value>Password</value>
   </data>
-  <data name="PauseTitle" xml:space="preserve">
+  <data name="PauseTitle.Text" xml:space="preserve">
     <value>Pause</value>
   </data>
-  <data name="PlayButton" xml:space="preserve">
+  <data name="PlayButton.Content" xml:space="preserve">
     <value>Play</value>
   </data>
-  <data name="PresetNameTextBox" xml:space="preserve">
+  <data name="PresetNameTextBox.Text" xml:space="preserve">
     <value>Preset 1</value>
   </data>
-  <data name="ProgressHeader" xml:space="preserve">
+  <data name="ProgressHeader.Header" xml:space="preserve">
     <value>Progress Rate</value>
   </data>
-  <data name="QualityTextBlock" xml:space="preserve">
+  <data name="QualityTextBlock.Text" xml:space="preserve">
     <value>Graphic Quality</value>
   </data>
-  <data name="RememberMeTextBlock" xml:space="preserve">
+  <data name="RememberMeTextBlock.Text" xml:space="preserve">
     <value>Remember me</value>
   </data>
-  <data name="ResumeButton" xml:space="preserve">
+  <data name="ResumeButton.Content" xml:space="preserve">
     <value>Resume</value>
   </data>
-  <data name="SaveButton" xml:space="preserve">
+  <data name="SaveButton.Content" xml:space="preserve">
     <value>Save</value>
   </data>
-  <data name="SavePresetButton" xml:space="preserve">
+  <data name="SavePresetButton.Content" xml:space="preserve">
     <value>Save Preset</value>
   </data>
-  <data name="SettingsButton" xml:space="preserve">
+  <data name="SettingsButton.Content" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="SingleplayerButton.Content" xml:space="preserve">
@@ -327,46 +327,46 @@
   <data name="SingleplayerNewGameButton.Content" xml:space="preserve">
     <value>New game</value>
   </data>
-  <data name="SlowItem" xml:space="preserve">
+  <data name="SlowItem.Content" xml:space="preserve">
     <value>Slow</value>
   </data>
-  <data name="SoundsTextBlock" xml:space="preserve">
+  <data name="SoundsTextBlock.Text" xml:space="preserve">
     <value>Sounds</value>
   </data>
-  <data name="SpawnPointTextBlock" xml:space="preserve">
+  <data name="SpawnPointTextBlock.Text" xml:space="preserve">
     <value>Random Spawn Point</value>
   </data>
-  <data name="SpeedTextBlock" xml:space="preserve">
+  <data name="SpeedTextBlock.Text" xml:space="preserve">
     <value>Game Speed</value>
   </data>
-  <data name="TileNumerHeader" xml:space="preserve">
+  <data name="TileNumerHeader.Header" xml:space="preserve">
     <value>Tile Number</value>
   </data>
-  <data name="TypeAItem" xml:space="preserve">
+  <data name="TypeAItem.Content" xml:space="preserve">
     <value>Virus Type A</value>
   </data>
-  <data name="TypeBItem" xml:space="preserve">
+  <data name="TypeBItem.Content" xml:space="preserve">
     <value>Virus Type B</value>
   </data>
-  <data name="TypeCItem" xml:space="preserve">
+  <data name="TypeCItem.Content" xml:space="preserve">
     <value>Virus Type C</value>
   </data>
-  <data name="TypeDItem" xml:space="preserve">
+  <data name="TypeDItem.Content" xml:space="preserve">
     <value>Virus Type D</value>
   </data>
-  <data name="VirusNameTextBlock" xml:space="preserve">
+  <data name="VirusNameTextBlock.Text" xml:space="preserve">
     <value>Virus Name</value>
   </data>
-  <data name="VirusTypeTextBlock" xml:space="preserve">
+  <data name="VirusTypeTextBlock.Text" xml:space="preserve">
     <value>Virus Type</value>
   </data>
-  <data name="VolumeTextBlock" xml:space="preserve">
+  <data name="VolumeTextBlock.Text" xml:space="preserve">
     <value>General volume</value>
   </data>
-  <data name="WindowedItem" xml:space="preserve">
+  <data name="WindowedItem.Content" xml:space="preserve">
     <value>Windowed</value>
   </data>
-  <data name="WindowTextBlock" xml:space="preserve">
+  <data name="WindowTextBlock.Text" xml:space="preserve">
     <value>Window mode</value>
   </data>
 </root>

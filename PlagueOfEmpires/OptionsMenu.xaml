@@ -25,12 +25,12 @@
                 </Border.Background>
 
                 <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Button Content="MUSIC AND SOUNDS" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Margin="10 100 10 10" Click="ButtonMusic_Click" IsEnabled="False"/>
-                    <Button Content="GRAPHICS" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonGraphics_Click"/>
-                        <Button Content="LANGUAGE" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonLanguaje_Click"/>
-                        <Button Content="CONTROLS" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonControls_Click" />
-                    <Button Content="ACCOUNT" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonAccount_Click" />
-                        <Button Content="CREDITS" Width="170" Height="45" Style="{StaticResource MenuButton}" Margin="10 250 10 10" Click="ButtonCredits_Click" />
+                    <Button x:Uid="MusicOptionButton" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Margin="10 100 10 10" Click="ButtonMusic_Click" IsEnabled="False"/>
+                        <Button x:Uid="GraphicsOptionButton" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonGraphics_Click"/>
+                        <Button x:Uid="LanguajeOptionButton" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonLanguaje_Click"/>
+                        <Button x:Uid="ControlsOptionButton" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonControls_Click" />
+                        <Button x:Uid="AccountOptionButton" Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="ButtonAccount_Click" />
+                        <Button x:Uid="CreditsOptionButton" Width="170" Height="45" Style="{StaticResource MenuButton}" Margin="10 250 10 10" Click="ButtonCredits_Click" />
                     <Button Style="{StaticResource MenuButton}" Width="170" VerticalAlignment="Top" Click="BackButton_OnClick" >
                         <Viewbox MaxHeight="30" MaxWidth="30">
                             <SymbolIcon Symbol="Back" Height="13"/>
