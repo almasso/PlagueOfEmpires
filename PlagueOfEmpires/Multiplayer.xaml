@@ -57,8 +57,8 @@
                     <Polyline Stroke="White" StrokeThickness="5" Points="47,450 97,450"/>
                 </Canvas>
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,140,0,0">
-                    <Button x:Uid="MultiplayerLocalButton" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="LocalButton_Click"/>
-                    <Button x:Uid="MultiplayerOnlineButton" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="OnlineButton_Click"/>
+                    <Button x:Uid="MultiplayerLocalButton" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="LocalButton_Click" FontSize="45px"/>
+                    <Button x:Uid="MultiplayerOnlineButton" Style="{StaticResource MainButton}" HorizontalAlignment="Right" Click="OnlineButton_Click" FontSize="40px"/>
                 </StackPanel>
             </StackPanel>
         </Viewbox>

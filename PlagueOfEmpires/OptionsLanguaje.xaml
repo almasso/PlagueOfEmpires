@@ -39,9 +39,10 @@
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8C1;"  Height="20"/>
                             </Viewbox>
-                            <ComboBox Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
-                                <ComboBoxItem Content="ENGLISH" IsSelected="True"/>
-                                <ComboBoxItem Content="ESPAÑOL"/>
+                            <ComboBox Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}" SelectionChanged="ComboBox_SelectionChanged">
+                                <ComboBoxItem Content="ESPAÑOL" IsSelected="{x:Bind spanish, Mode=OneWay}"/>
+                                <ComboBoxItem Content="ENGLISH" IsSelected="{x:Bind english, Mode=OneWay}"/>
+                                <ComboBoxItem Content="DEUTSCH" IsSelected="{x:Bind german, Mode=OneWay}"/>
                             </ComboBox>
                         </StackPanel>
                     </StackPanel>

@@ -160,7 +160,7 @@
     <value>Difficulty</value>
   </data>
   <data name="DLCButton.Text" xml:space="preserve">
-    <value>Mods &amp;amp; additional content</value>
+    <value>Mods &amp; additional content</value>
   </data>
   <data name="EmailTextBox.Text" xml:space="preserve">
     <value>Email / Username</value>
