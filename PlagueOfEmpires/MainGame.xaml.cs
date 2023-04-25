@@ -80,10 +80,18 @@ namespace PlagueOfEmpires
         {
             var id = await e.DataView.GetTextAsync();
             VMStructure tmp = ListaEstructuras.ElementAt(Int32.Parse(id)) as VMStructure;
-            Viewbox vb = e.OriginalSource as Viewbox;
-            Grid gr = vb.Child as Grid;
-            Image img = gr.Children[0] as Image;
-            img.Source = new BitmapImage(new Uri("ms-appx:///" + tmp.Imagen));
+            try
+            {
+                Viewbox vb = e.OriginalSource as Viewbox;
+                Grid gr = vb.Child as Grid;
+                Image img = gr.Children[0] as Image;
+                img.Source = new BitmapImage(new Uri("ms-appx:///" + tmp.Imagen));
+            }
+            catch
+            {
+                
+            }
+           
         }
 
         private void GridView_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
