@@ -177,7 +177,7 @@
   <data name="FastItem.Content" xml:space="preserve">
     <value>rápido</value>
   </data>
-  <data name="FullscreenItem.Context" xml:space="preserve">
+  <data name="FullscreenItem.Content" xml:space="preserve">
     <value>pantalla completa</value>
   </data>
   <data name="GameSettingsTitle.Text" xml:space="preserve">
