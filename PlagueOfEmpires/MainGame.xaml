@@ -84,21 +84,21 @@
 
         <Viewbox Grid.Row="1" Width="250" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button CornerRadius="50" Padding="-2.5" Background="White">
+                <Button CornerRadius="50" Padding="-2.5" Background="White" IsTabStop="False">
                     <Ellipse Width="15" Height="15" Stroke="#8b0707" StrokeThickness="1">
                         <Ellipse.Fill>
                             <ImageBrush ImageSource="{x:Bind Enemy1}"/>
                         </Ellipse.Fill>
                     </Ellipse>
                 </Button>
-                <Button CornerRadius="50" Padding="-2.5" Background="White">
+                <Button CornerRadius="50" Padding="-2.5" Background="White" IsTabStop="False">
                     <Ellipse Width="20" Height="20" Stroke="#8b0707">
                         <Ellipse.Fill>
                             <ImageBrush ImageSource="{x:Bind Player}"/>
                         </Ellipse.Fill>
                     </Ellipse>
                 </Button>
-                <Button CornerRadius="50" Padding="-2.5" Background="White">
+                <Button CornerRadius="50" Padding="-2.5" Background="White" IsTabStop="False">
                     <Ellipse Width="15" Height="15" Stroke="#8b0707">
                         <Ellipse.Fill>
                             <ImageBrush ImageSource="{x:Bind Enemy2}"/>
