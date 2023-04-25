@@ -22,7 +22,7 @@
                             </media:RadialGradientBrush.GradientStops>
                         </media:RadialGradientBrush>
                     </Border.Background>
-                    <TextBlock Text="GRAPHICS" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
+                    <TextBlock x:Uid="GraphicsTitle" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
                 </Border>
 
                 <Border HorizontalAlignment="Stretch" Height="700">
@@ -36,19 +36,19 @@
                     </Border.Background>
 
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <TextBlock Text="GRAPHIC QUALITY" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
+                        <TextBlock x:Uid="QualityTextBlock" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7F4;"  Height="20"/>
                             </Viewbox>
                             <ComboBox Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
-                                <ComboBoxItem Content="LOW"/>
-                                <ComboBoxItem Content="MEDIUM" IsSelected="True"/>
-                                <ComboBoxItem Content="HIGH"/>
+                                <ComboBoxItem x:Uid="LowItem"/>
+                                <ComboBoxItem x:Uid="MediumItem" IsSelected="True"/>
+                                <ComboBoxItem x:Uid="HighItem"/>
                             </ComboBox>
                         </StackPanel>
 
-                        <TextBlock Text="BRIGHTNESS" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
+                        <TextBlock x:Uid="BrightnessTextBlock" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE706;"  Height="20"/>
@@ -61,18 +61,18 @@
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7B3;"  Height="20"/>
                             </Viewbox>
-                            <TextBlock Text="COLORBLIND MODE" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 10 10 10"/>
+                            <TextBlock x:Uid="ColorblindTextBlock" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 10 10 10"/>
                             <CheckBox  Foreground="#8b0707"/>
                         </StackPanel>
 
-                        <TextBlock Text="WINDOW MODE" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 60 10 10"/>
+                        <TextBlock x:Uid="WindowTextBlock" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 60 10 10"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE9A6;"  Height="20"/>
                             </Viewbox>
                             <ComboBox Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
-                                <ComboBoxItem Content="WINDOWED"/>
-                                <ComboBoxItem Content="FULLSCREEN" IsSelected="True"/>
+                                <ComboBoxItem x:Uid="WindowedItem"/>
+                                <ComboBoxItem x:Uid="FullscreenItem" IsSelected="True"/>
                             </ComboBox>
                         </StackPanel>
                     </StackPanel>

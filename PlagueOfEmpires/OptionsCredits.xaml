@@ -21,7 +21,7 @@
                             </media:RadialGradientBrush.GradientStops>
                         </media:RadialGradientBrush>
                     </Border.Background>
-                    <TextBlock Text="CREDITS" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
+                    <TextBlock x:Uid="CreditsTitle" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
                 </Border>
 
                 <Border HorizontalAlignment="Stretch" Height="700">
@@ -35,9 +35,9 @@
                     </Border.Background>
 
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <TextBlock Text="LEAD  PROGRAMMERS,  ART  DIRECTORS  AND  UI  DESIGNERS :" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
-                        <TextBlock Text="ALEJANDRO MASSÓ MARTÍNEZ" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
-                        <TextBlock Text="ANDREA  VEGA  SAUGAR" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 20 10 10"/>
+                        <TextBlock x:Uid="CreditsTextBlock" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
+                        <TextBlock x:Uid="CreditsAlex" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
+                        <TextBlock x:Uid="CreditsAndrea" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 20 10 10"/>
 
                     </StackPanel>
 

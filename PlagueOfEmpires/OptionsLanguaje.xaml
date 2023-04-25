@@ -20,7 +20,7 @@
                             </media:RadialGradientBrush.GradientStops>
                         </media:RadialGradientBrush>
                     </Border.Background>
-                    <TextBlock Text="LANGUAJE" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
+                    <TextBlock x:Uid="LanguajeTitle" FontSize="40" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold"/>
                 </Border>
 
                 <Border HorizontalAlignment="Stretch" Height="700">
@@ -34,14 +34,14 @@
                     </Border.Background>
 
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <TextBlock Text="DISPLAY LANGUAJE" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
+                        <TextBlock x:Uid="LanguajeTextBlock" FontSize="15" FontFamily="{StaticResource Aboreto}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBold" Margin="10 50 10 10"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                             <Viewbox MaxHeight="30" MaxWidth="30" Margin="50 10 10 10">
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8C1;"  Height="20"/>
                             </Viewbox>
                             <ComboBox Background="White" Foreground="#8b0707" Margin="10" HorizontalAlignment="Center" Width="400" BorderBrush="#8b0707" BorderThickness="5" FontFamily="{StaticResource Aboreto}">
                                 <ComboBoxItem Content="ENGLISH" IsSelected="True"/>
-                                <ComboBoxItem Content="SPANISH"/>
+                                <ComboBoxItem Content="ESPAÑOL"/>
                             </ComboBox>
                         </StackPanel>
                     </StackPanel>
