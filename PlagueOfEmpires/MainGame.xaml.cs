@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Numerics;
@@ -23,11 +25,13 @@ namespace PlagueOfEmpires
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainGame : Page
+    public sealed partial class MainGame : Page, INotifyPropertyChanged
     {
         string Enemy1 = "./Assets/virusA-Morado.png";
         string Enemy2 = "./Assets/virusB-Rojo.png";
         string Player = "./Assets/virusC-Azul.png";
+        int contador = 0;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public ObservableCollection<VMStructure> ListaEstructuras { get; } = new ObservableCollection<VMStructure>();
         public ObservableCollection<VMStructure> EstructurasTablero { get; set; } = new ObservableCollection<VMStructure>();
@@ -66,14 +70,16 @@ namespace PlagueOfEmpires
             Frame.Navigate(typeof(PauseMenu));
         }
 
-        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void ImageGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
             VMStructure item = e.ClickedItem as VMStructure;
+            GridViewItem panel = MiGridView.ContainerFromIndex(contador) as GridViewItem;
+            Viewbox vb = panel.ContentTemplateRoot as Viewbox;
+            Grid gr = vb.Child as Grid;
+            Image img = gr.Children[0] as Image;
+            img.Source = new BitmapImage(new Uri("ms-appx:///" + item.Imagen));
+            contador++;
+            contador %= 72;
         }
 
         private async void MiGridView_Drop(object sender, DragEventArgs e)
