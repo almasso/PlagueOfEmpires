@@ -43,7 +43,7 @@ namespace PlagueOfEmpires
                 if (b is Button)
                 {
                     Button but = b as Button;
-                    if (!but.IsEnabled)
+                    if (but.IsEnabled)
                     {
                         if (e.GetCurrentPoint(but).Properties.IsLeftButtonPressed)
                         {

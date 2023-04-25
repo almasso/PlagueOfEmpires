@@ -53,8 +53,9 @@ namespace PlagueOfEmpires
             Frame.Navigate(typeof(OptionsMenu));
         }
 
-        public void ActualizaIU() { }
-
-        
+        private void QuitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
     }
 }

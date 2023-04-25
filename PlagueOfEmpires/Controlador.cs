@@ -76,7 +76,7 @@ namespace PlagueOfEmpires
             {
                 LeeMando();
                 ZMMando();
-                miPagina.ActualizaIU();
+                //miPagina.ActualizaIU();
                 FeedBack();
             }
         }

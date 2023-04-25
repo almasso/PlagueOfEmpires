@@ -38,7 +38,7 @@
                     <TextBlock x:Uid="DLCButton" TextWrapping="WrapWholeWords" TextAlignment="Center"/>
                 </Button>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="576">
-                    <Button Style="{StaticResource MainButton}" Width="228" IsTabStop="True" TabIndex="4">
+                    <Button Style="{StaticResource MainButton}" Width="228" IsTabStop="True" TabIndex="4" Click="QuitButton_Click">
                         <Viewbox MaxHeight="70" MaxWidth="70">
                             <SymbolIcon Symbol="Cancel"/>
                         </Viewbox>
