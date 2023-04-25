@@ -291,7 +291,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <PRIResource Include="Strings\de-DE\de-DE.resw" />
+    <PRIResource Include="Strings\de-DE\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fonts\Aboreto-Regular.ttf">
@@ -299,10 +299,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <PRIResource Include="Strings\en-US\en-US.resw" />
+    <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
-    <PRIResource Include="Strings\es-ES\es-ES.resw" />
+    <PRIResource Include="Strings\es-ES\Resources.resw" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
