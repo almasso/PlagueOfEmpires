@@ -13,7 +13,7 @@
     <Page.Resources>
         <ui:AttachedDropShadow x:Name="CommonShadow" Offset="0,10,0" Color="Gray" Opacity="1" CastTo="{x:Bind ShadowTarget}" IsMasked="True"/>
         <DataTemplate x:Key="DLC_Content" x:DataType="local:VMMod">
-            <Grid>
+            <Grid TabFocusNavigation="Cycle">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>

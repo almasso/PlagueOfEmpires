@@ -36,7 +36,7 @@ namespace PlagueOfEmpires
             music.AutoPlay = true;
             music.Source = MediaSource.CreateFromStorageFile(file);
             music.IsLoopingEnabled = true;
-            music.Volume = 0.1f;
+            music.Volume = 0.5f;
             music.Play();
         }
     }
